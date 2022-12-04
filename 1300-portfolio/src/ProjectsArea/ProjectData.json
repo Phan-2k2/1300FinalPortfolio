@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Personas and Storyboarding",
+    "description": "Understanding interfaces and their users.",
+    "thumbnail": "images/storyboarding.jpg",
+    "link":""
+  },
+  {
+    "name": "Responsive Redesign",
+    "description": "Redesigning an old website to be more responsive.",
+    "thumbnail": "images/redesign.jpg",
+    "link":""
+  },
+  {
+    "name": "Iterative Design",
+    "description": "Designing and redesigning something new with the help of user feedback.",
+    "thumbnail": "images/iterative.jpg",
+    "link":""
+  },
+  {
+    "name": "Development",
+    "description": "Creating a site using React and making use of states.",
+    "thumbnail": "images/development.jpg",
+    "link":""
+  }
+]
