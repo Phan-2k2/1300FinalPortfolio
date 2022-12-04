@@ -1,13 +1,19 @@
 import AppBar from '@mui/material/AppBar';
-import React from "react";
+import React, {useState} from "react";
 import {Box, Button, Drawer, IconButton, Toolbar, Typography} from "@mui/material";
 import { Icon } from '@iconify/react';
+import './NavBar.css'
 
 
 function NavBar (props) {
 
-    function menuToggle () {
-        console.log("hello!")
+    const [openDrawer, setOpenDrawer] = useState(false);
+    function drawerToggle () {
+        if(openDrawer){
+            setOpenDrawer(false);
+        } else {
+            setOpenDrawer(true);
+        }
     }
 
     return(
@@ -19,7 +25,7 @@ function NavBar (props) {
                     <IconButton
                         aria-label="open drawer"
                         edge="start"
-                        onClick={menuToggle}
+                        onClick={drawerToggle}
                         sx={{ mr: 2, display: { sm: 'none' } }}
                     >
                         <Icon icon="material-symbols:menu" color="white" />
@@ -49,23 +55,44 @@ function NavBar (props) {
                     </Box>
                 </Toolbar>
             </AppBar>
-            {/*<Box component="nav">*/}
-            {/*    <Drawer*/}
-            {/*        container={container}*/}
-            {/*        variant="temporary"*/}
-            {/*        open={mobileOpen}*/}
-            {/*        onClose={handleDrawerToggle}*/}
-            {/*        ModalProps={{*/}
-            {/*            keepMounted: true, // Better open performance on mobile.*/}
-            {/*        }}*/}
-            {/*        sx={{*/}
-            {/*            display: { xs: 'block', sm: 'none' },*/}
-            {/*            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },*/}
-            {/*        }}*/}
-            {/*    >*/}
-            {/*        {drawer}*/}
-            {/*    </Drawer>*/}
-            {/*</Box>*/}
+            <Box component="nav">
+                <Drawer
+                    variant="temporary"
+                    open={openDrawer}
+                    onClose={drawerToggle}
+                    ModalProps={{
+                        keepMounted: true, // Better open performance on mobile.
+                    }}
+                    sx={{
+                        display: { xs: 'block', sm: 'none' },
+                        '& .MuiDrawer-paper': { boxSizing: 'border-box', width: 240 },
+                        background: "rgba(0,0,0,0.7)",
+                    }}
+                    PaperProps={{sx: {background: "rgba(0,0,0,1)"}}}
+                >
+                    {
+                        <div className="menuDrawer">
+                            <div id={"drawerButtons"}>
+                                <Button key="about" sx={{ color: '#fff', background: "#000", '&:hover' :  {background: "#fff", color: "#000"}}}>
+                                    About
+                                </Button>
+                                <Button key="projects" sx={{ color: '#fff', background: "#000", '&:hover' :  {background: "#fff", color: "#000"}}}>
+                                    Projects
+                                </Button>
+                                <Button key="contact" sx={{ color: '#fff', background: "#000", '&:hover' :  {background: "#fff", color: "#000"}}}>
+                                    Contact
+                                </Button>
+                            </div>
+                            <div id="drawerCopyright">
+                                <Typography variant="body2" sx={{pb:2
+                                }}>
+                                    &copy; CrazyKoala555 2022
+                                </Typography>
+                            </div>
+                        </div>
+                    }
+                </Drawer>
+            </Box>
         </Box>
     )
 }

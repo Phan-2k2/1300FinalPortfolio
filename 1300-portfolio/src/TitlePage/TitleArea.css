@@ -1,0 +1,14 @@
+#titleArea{
+    background-image: url("./main-background-blurred2.jpg");
+    height: 80vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+
+}
+/*align-items: center;*/
+/*justify-content: right;*/
+/*color: white;*/
+/*text-align: center;*/
+/*padding-right: 10vw;*/
