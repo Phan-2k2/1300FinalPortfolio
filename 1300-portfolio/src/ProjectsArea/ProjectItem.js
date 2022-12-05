@@ -6,7 +6,7 @@ function ProjectItem (props) {
             <Card sx={{ minWidth: 350, height: "100%", background: "rgba(45, 42, 46, 1)"}}>
                 <CardMedia
                     component="img"
-                    height="150"
+                    height="300"
                     image={props.thumbnail}
                     alt={props.name}
                 />
@@ -21,7 +21,7 @@ function ProjectItem (props) {
                     </Typography>
                 </CardContent>
                 <CardActions>
-                    <Button size="medium" onClick={props.goToProject} sx={{ color: '#fff', background: "#000", '&:hover' :  {background: "#fff", color: "#000"}}}>Go to Site</Button>
+                    <Button size="medium" onClick={props.goToProject} sx={{ color: '#fff', background: "#000", '&:hover' :  {background: "#fff", color: "#000"}}}>Read More</Button>
                 </CardActions>
             </Card>
         </div>

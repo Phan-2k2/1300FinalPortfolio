@@ -1,21 +1,22 @@
-import {Container, Fade, List, ListItem, Typography} from "@mui/material";
+import {Container, Fade, Typography} from "@mui/material";
 import './AboutArea.css'
-import {useEffect, useRef, useState} from "react";
 import {Icon} from "@iconify/react";
+import {useRef} from "react";
+import {useIsVisible} from "../App";
 
-//fade in stuff: https://www.webtips.dev/webtips/react-hooks/element-in-viewport
-//https://bobbyhadz.com/blog/react-check-if-element-in-viewport#:~:text=To%20check%20if%20an%20element,if%20the%20element%20is%20intersecting.
 function AboutArea (props) {
+    const aboutRef = useRef();
+    const isVisible = useIsVisible(aboutRef);
 
     return(
-        <div id="aboutArea">
-            <Fade in={true} timeout={1000}>
+        <div id="aboutArea" ref={aboutRef}>
+            <Fade in={isVisible} timeout={1000}>
                 <div id="aboutAreaContent">
                     <Typography variant="h3" sx={{}}>
                         <b>About Me</b>
                     </Typography>
                     <div id="aboutInfo">
-                        <Typography variant="body2" sx={{maxWidth:{xs : "100%", sm : "50%"}}} id="aboutWords">
+                        <Typography variant="subtitle1" sx={{maxWidth:{xs : "100%", sm : "50%"}}} id="aboutWords">
                             Hey! I'm CrazyKoala555. I'm from the Great State of West Virginia, and currently
                             go to Brown University. I'm concentrating in Computer Science, where I hope to have
                             an illustrious career as a UI designer. I really do love frontend work. When I'm not

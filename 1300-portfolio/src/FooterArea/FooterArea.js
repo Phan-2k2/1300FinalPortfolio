@@ -1,11 +1,11 @@
 import {Typography} from "@mui/material";
 
 const footerStyle = {
-    "height" : "10vh",
+    "height" : "5vh",
     "display" : "flex",
-    "justify-content": "center",
-    "align-items": "center",
-    "background-color" : "rgba(45, 42, 46, 1)"
+    "justifyContent": "center",
+    "alignItems": "center",
+    "backgroundColor" : "rgba(45, 42, 46, 1)"
 }
 function FooterArea () {
     return (

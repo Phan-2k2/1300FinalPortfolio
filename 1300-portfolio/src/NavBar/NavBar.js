@@ -16,10 +16,14 @@ function NavBar (props) {
         }
     }
 
+
+
     return(
         <Box sx={{ display: 'flex' }}>
             <AppBar component="nav" sx={{
-                backgroundColor: "rgba(0,0,0,1)"
+                // backgroundColor: "rgba(0,0,0,0.5)"
+                backgroundColor: "rgba(0,0,0,0.5)"
+
             }}>
                 <Toolbar>
                     <IconButton
