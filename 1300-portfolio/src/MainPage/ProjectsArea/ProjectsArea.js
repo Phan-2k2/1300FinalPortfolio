@@ -8,25 +8,25 @@ const projectData =
         "name": "Personas and Storyboarding",
         "description": "Understanding interfaces and their users.",
         "thumbnail": "ProjectThumbnails/storyboarding-blurred.jpg",
-        "link":""
+        "link":"/personas-storyboarding"
     },
     {
         "name": "Responsive Redesign",
         "description": "Redesigning an old website to be more responsive.",
         "thumbnail": "ProjectThumbnails/redesign.jpg",
-        "link":""
+        "link":"/responsive-redesign"
     },
     {
         "name": "Iterative Design",
         "description": "Designing and redesigning something new with the help of user feedback.",
         "thumbnail": "ProjectThumbnails/iterative2.jpg",
-        "link":""
+        "link":"/iterative-design"
     },
     {
         "name": "Development",
         "description": "Creating a site using React and making use of states.",
         "thumbnail": "ProjectThumbnails/development.jpeg",
-        "link":""
+        "link":"/development"
     }
 ]
 
@@ -45,10 +45,10 @@ function ProjectsArea (props) {
                         <b>My Projects</b>
                     </Typography>
                     <div id="projects">
-                        {projectData.map((project, index) => (
+                        {projectData.map((project) => (
                             <ProjectItem key={project.name}
-                                         name={project.name} description={project.description}
-                                         thumbnail={project.thumbnail} goToProject={() => console.log(project.name)}
+                                         name={project.name} description={project.description} link={project.link}
+                                         thumbnail={project.thumbnail}
                             />
                         ))}
                     </div>

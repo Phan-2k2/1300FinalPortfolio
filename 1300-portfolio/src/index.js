@@ -1,17 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import MainPage from './MainPage/MainPage';
+import FooterArea from "./MainPage/FooterArea/FooterArea";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+import ResponsiveRedesign from "./ResponsiveRedesign/ResponsiveRedesign";
+import Development from "./Development/Development";
+import PersonasStoryboarding from "./PersonasStoryboarding/PersonasStoryboarding";
+import IterativeDesign from "./IterativeDesign/IterativeDesign";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+      <BrowserRouter>
+          <Routes>
+              <Route path="/1300FinalPortfolio" element={<MainPage/>}/>
+              <Route path="/personas-storyboarding" element={<PersonasStoryboarding/>}/>
+              <Route path="/responsive-redesign" element={<ResponsiveRedesign/>}/>
+              <Route path="/iterative-design" element={<IterativeDesign/>}/>
+              <Route path="/development" element={<Development/>}/>
+          </Routes>
+          <FooterArea/>
+      </BrowserRouter>
   </React.StrictMode>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

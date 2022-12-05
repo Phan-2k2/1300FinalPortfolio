@@ -1,5 +1,6 @@
 import './ProjectsArea.css'
 import {Button, Card, CardActions, CardContent, CardMedia, Typography} from "@mui/material";
+import {NavLink} from "react-router-dom";
 function ProjectItem (props) {
     return(
         <div className="projectCard">
@@ -21,7 +22,9 @@ function ProjectItem (props) {
                     </Typography>
                 </CardContent>
                 <CardActions>
-                    <Button size="medium" onClick={props.goToProject} sx={{ color: '#fff', background: "#000", '&:hover' :  {background: "#fff", color: "#000"}}}>Read More</Button>
+                    <NavLink to={props.link}>
+                        <Button size="medium" sx={{ color: '#fff', background: "#000", '&:hover' :  {background: "#fff", color: "#000"}}}>Read More</Button>
+                    </NavLink>
                 </CardActions>
             </Card>
         </div>

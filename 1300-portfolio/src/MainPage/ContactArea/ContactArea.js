@@ -2,7 +2,7 @@ import {Alert, Button, Grow, Snackbar, Typography} from "@mui/material";
 import './ContactArea.css'
 import {useState} from "react";
 import {Icon} from "@iconify/react";
-;
+
 function ContactArea (props) {
 
     const [snackbarStatus, setSnackbarStatus] = useState(false);

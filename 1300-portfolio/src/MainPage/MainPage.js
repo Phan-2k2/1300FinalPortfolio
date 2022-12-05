@@ -1,10 +1,9 @@
-import './App.css';
+import './MainPage.css';
 import NavBar from "./NavBar/NavBar";
 import TitleArea from "./TitlePage/TitleArea";
 import AboutArea from "./AboutArea/AboutArea";
 import ProjectsArea from "./ProjectsArea/ProjectsArea";
 import ContactArea from "./ContactArea/ContactArea";
-import FooterArea from "./FooterArea/FooterArea";
 import {useEffect, useRef, useState} from "react";
 
 //https://dev.to/jmalvarez/check-if-an-element-is-visible-with-react-hooks-27h8
@@ -22,7 +21,7 @@ export function useIsVisible(ref) {
     return isIntersecting;
 }
 
-function App() {
+function MainPage() {
     const navbarRef = useRef();
     const titleRef = useRef();
     const isVisibleTitle = useIsVisible(titleRef);
@@ -42,9 +41,8 @@ function App() {
         <ProjectsArea projectsRef={projectsRef} isVisible={isVisibleProj}/>
         <hr/>
         <ContactArea contactsRef={contactsRef} isVisible={isVisibleContacts}/>
-        <FooterArea/>
     </div>
   );
 }
 
-export default App;
+export default MainPage;
