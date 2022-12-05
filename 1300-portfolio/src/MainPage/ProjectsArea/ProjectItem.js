@@ -22,7 +22,7 @@ function ProjectItem (props) {
                     </Typography>
                 </CardContent>
                 <CardActions>
-                    <NavLink to={props.link}>
+                    <NavLink to={props.link} style={{textDecoration: 'none'}}>
                         <Button size="medium" sx={{ color: '#fff', background: "#000", '&:hover' :  {background: "#fff", color: "#000"}}}>Read More</Button>
                     </NavLink>
                 </CardActions>

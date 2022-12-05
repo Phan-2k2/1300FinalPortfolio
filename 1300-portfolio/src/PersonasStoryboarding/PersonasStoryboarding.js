@@ -1,5 +1,5 @@
 import "./PersonasStoryboarding.css"
-import NavBar from "./NavBar/NavBar";
+import ProjectsNavbar from "../ProjectsNavbar/ProjectsNavbar";
 import TitleArea from "./TitlePage/TitleArea";
 import {useRef} from "react";
 import {useIsVisible} from "../MainPage/MainPage";
@@ -10,7 +10,7 @@ function PersonasStoryboarding () {
 
     return (
         <div id="contentArea">
-            <NavBar/>
+            <ProjectsNavbar/>
             <TitleArea titleRef={titleRef} isVisible={isVisibleTitle}/>
             <ContentArea/>
         </div>

@@ -5,7 +5,7 @@ function TitleArea (props) {
 
 
     return(
-        <div id="titleArea" ref={props.titleRef}>
+        <div id="titleAreaPersonas" ref={props.titleRef}>
             <Grow in={props.isVisible} timeout={1000}>
                 <Container sx={{
                     display: "flex",

@@ -8,11 +8,13 @@ import ResponsiveRedesign from "./ResponsiveRedesign/ResponsiveRedesign";
 import Development from "./Development/Development";
 import PersonasStoryboarding from "./PersonasStoryboarding/PersonasStoryboarding";
 import IterativeDesign from "./IterativeDesign/IterativeDesign";
+import ScrollTopOnChange from "./ScrollTopOnChange";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
       <BrowserRouter>
+          <ScrollTopOnChange/>
           <Routes>
               <Route path="/1300FinalPortfolio" element={<MainPage/>}/>
               <Route path="/personas-storyboarding" element={<PersonasStoryboarding/>}/>

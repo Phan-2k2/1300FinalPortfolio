@@ -2,7 +2,7 @@ import AppBar from '@mui/material/AppBar';
 import React, {useState} from "react";
 import {Box, Button, Drawer, IconButton, Toolbar, Typography} from "@mui/material";
 import { Icon } from '@iconify/react';
-import './NavBar.css'
+import '../../Navbar.css'
 import { animateScroll as scroll} from 'react-scroll'
 
 

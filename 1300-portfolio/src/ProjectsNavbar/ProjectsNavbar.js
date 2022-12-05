@@ -2,12 +2,12 @@ import AppBar from '@mui/material/AppBar';
 import React from "react";
 import {Box, Button, IconButton, Toolbar, Typography} from "@mui/material";
 import { Icon } from '@iconify/react';
-import './NavBar.css'
+import '../Navbar.css'
 import {animateScroll as scroll} from 'react-scroll'
 import {NavLink} from "react-router-dom";
 
 
-function NavBar (props) {
+function ProjectsNavbar (props) {
 
     return(
             <Box sx={{ display: 'flex' }}>
@@ -28,7 +28,7 @@ function NavBar (props) {
                             CrazyKoala555
                         </Typography>
                         <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-                            <NavLink to={"/1300FinalPortfolio"}>
+                            <NavLink to={"/1300FinalPortfolio"} style={{textDecoration: 'none'}}>
                                 <Button key="about" sx={{ color: '#fff' }}>
                                     Return to Home
                                 </Button>
@@ -39,4 +39,4 @@ function NavBar (props) {
             </Box>
     )
 }
-export default NavBar;
+export default ProjectsNavbar;
