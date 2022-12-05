@@ -1,0 +1,9 @@
+#titleArea{
+    background-image: url("main-background-blurred2.jpg");
+    height: 80vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+
+}
