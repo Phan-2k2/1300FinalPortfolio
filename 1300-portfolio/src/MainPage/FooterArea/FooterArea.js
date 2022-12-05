@@ -1,7 +1,7 @@
 import {Typography} from "@mui/material";
 
 const footerStyle = {
-    "height" : "5vh",
+    "height" : "8vh",
     "display" : "flex",
     "justifyContent": "center",
     "alignItems": "center",

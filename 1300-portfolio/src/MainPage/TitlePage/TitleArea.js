@@ -25,7 +25,7 @@ function TitleArea (props) {
                                 variant="h6"
                                 component="div"
                                 sx={{p:2}}
-                            > I do graphical wizardry.
+                            > I'm glad you're here. I'm a UI/UX Designer.
                             </Typography>
                         }
                     </Typography>
