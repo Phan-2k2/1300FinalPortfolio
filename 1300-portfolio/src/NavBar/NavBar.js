@@ -22,7 +22,7 @@ function NavBar (props) {
         <Box sx={{ display: 'flex' }}>
             <AppBar component="nav" sx={{
                 // backgroundColor: "rgba(0,0,0,0.5)"
-                backgroundColor: "rgba(0,0,0,0.5)"
+                backgroundColor: "rgba(0,0,0,0.7)"
 
             }}>
                 <Toolbar>
