@@ -1,8 +1,8 @@
-import {Alert, Button, Fade, Snackbar, Typography} from "@mui/material";
+import {Alert, Button, Grow, Snackbar, Typography} from "@mui/material";
 import './ContactArea.css'
-import {useRef, useState} from "react";
+import {useState} from "react";
 import {Icon} from "@iconify/react";
-import {useIsVisible} from "../App";
+;
 function ContactArea (props) {
 
     const [snackbarStatus, setSnackbarStatus] = useState(false);
@@ -16,12 +16,11 @@ function ContactArea (props) {
 
     const iconSize = 50;
 
-    const contactsRef = useRef();
-    const isVisible = useIsVisible(contactsRef);
+
 
     return (
-        <div id="contactArea" ref={contactsRef}>
-            <Fade in={isVisible} timeout={1000}>
+        <div id="contactArea" ref={props.contactsRef}>
+            <Grow in={props.isVisible} timeout={1000}>
                 <div id="contactAreaContent">
                     <Typography variant="h3" sx={{}}>
                         <b>Contact Me!</b>
@@ -70,7 +69,7 @@ function ContactArea (props) {
                         </Alert>
                     </Snackbar>
                 </div>
-            </Fade>
+            </Grow>
         </div>
     )
 }

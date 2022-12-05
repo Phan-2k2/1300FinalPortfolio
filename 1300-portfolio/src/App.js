@@ -5,7 +5,7 @@ import AboutArea from "./AboutArea/AboutArea";
 import ProjectsArea from "./ProjectsArea/ProjectsArea";
 import ContactArea from "./ContactArea/ContactArea";
 import FooterArea from "./FooterArea/FooterArea";
-import {useEffect, useState} from "react";
+import {useEffect, useRef, useState} from "react";
 
 //https://dev.to/jmalvarez/check-if-an-element-is-visible-with-react-hooks-27h8
 export function useIsVisible(ref) {
@@ -23,17 +23,25 @@ export function useIsVisible(ref) {
 }
 
 function App() {
-
+    const navbarRef = useRef();
+    const titleRef = useRef();
+    const isVisibleTitle = useIsVisible(titleRef);
+    const aboutRef = useRef();
+    const isVisibleAbout = useIsVisible(aboutRef);
+    const projectsRef = useRef();
+    const isVisibleProj = useIsVisible(projectsRef);
+    const contactsRef = useRef();
+    const isVisibleContacts = useIsVisible(contactsRef);
 
   return (
     <div className="App">
-        <NavBar/>
-        <TitleArea/>
-        <AboutArea/>
+        <NavBar aboutRef={aboutRef} projectsRef={projectsRef} contactsRef={contactsRef} navbarRef={navbarRef}/>
+        <TitleArea titleRef={titleRef} isVisible={isVisibleTitle}/>
+        <AboutArea aboutRef={aboutRef} isVisible={isVisibleAbout}/>
         <hr/>
-        <ProjectsArea/>
+        <ProjectsArea projectsRef={projectsRef} isVisible={isVisibleProj}/>
         <hr/>
-        <ContactArea/>
+        <ContactArea contactsRef={contactsRef} isVisible={isVisibleContacts}/>
         <FooterArea/>
     </div>
   );

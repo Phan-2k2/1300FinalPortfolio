@@ -1,15 +1,12 @@
 import './TitleArea.css'
-import {Container, Fade, Typography} from "@mui/material";
-import {useRef} from "react";
-import {useIsVisible} from "../App";
+import {Container, Grow, Typography} from "@mui/material";
 
 function TitleArea (props) {
-    const titleRef = useRef();
-    const isVisible = useIsVisible(titleRef);
+
 
     return(
-        <div id="titleArea" ref={titleRef}>
-            <Fade in={isVisible} timeout={1000}>
+        <div id="titleArea" ref={props.titleRef}>
+            <Grow in={props.isVisible} timeout={1000}>
                 <Container sx={{
                     display: "flex",
                     alignItems: "center",
@@ -33,7 +30,7 @@ function TitleArea (props) {
                         }
                     </Typography>
                 </Container>
-            </Fade>
+            </Grow>
             </div>
     )
 }

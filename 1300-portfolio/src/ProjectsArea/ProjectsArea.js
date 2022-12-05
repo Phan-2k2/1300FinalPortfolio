@@ -1,8 +1,6 @@
-import {Fade, Typography} from "@mui/material";
+import {Grow, Typography} from "@mui/material";
 import './ProjectsArea.css'
 import ProjectItem from "./ProjectItem";
-import {useRef} from "react";
-import {useIsVisible} from "../App";
 
 const projectData =
     [
@@ -37,12 +35,11 @@ projectData.forEach((item) => {
 });
 
 function ProjectsArea (props) {
-    const projectsRef = useRef();
-    const isVisible = useIsVisible(projectsRef);
+
 
     return (
-        <div id="projectsArea" ref={projectsRef}>
-            <Fade in={isVisible} timeout={1000}>
+        <div id="projectsArea" ref={props.projectsRef}>
+            <Grow in={props.isVisible} timeout={1000}>
                 <div id="projectsAreaContent">
                     <Typography variant="h3" sx={{}}>
                         <b>My Projects</b>
@@ -56,7 +53,7 @@ function ProjectsArea (props) {
                         ))}
                     </div>
                 </div>
-            </Fade>
+            </Grow>
         </div>
     )
 }

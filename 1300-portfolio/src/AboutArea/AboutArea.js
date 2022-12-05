@@ -1,16 +1,13 @@
-import {Container, Fade, Typography} from "@mui/material";
+import {Container, Grow, Typography} from "@mui/material";
 import './AboutArea.css'
 import {Icon} from "@iconify/react";
-import {useRef} from "react";
-import {useIsVisible} from "../App";
 
 function AboutArea (props) {
-    const aboutRef = useRef();
-    const isVisible = useIsVisible(aboutRef);
+
 
     return(
-        <div id="aboutArea" ref={aboutRef}>
-            <Fade in={isVisible} timeout={1000}>
+        <div id="aboutArea" ref={props.aboutRef}>
+            <Grow in={props.isVisible} timeout={1000}>
                 <div id="aboutAreaContent">
                     <Typography variant="h3" sx={{}}>
                         <b>About Me</b>
@@ -37,7 +34,7 @@ function AboutArea (props) {
                         </Container>
                     </div>
                 </div>
-            </Fade>
+            </Grow>
         </div>
     )
 }

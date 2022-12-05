@@ -18,7 +18,7 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy" : "gh-pages -d build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -44,6 +44,7 @@
   },
   "devDependencies": {
     "@iconify/react": "^4.0.1",
-    "gh-pages": "^4.0.0"
+    "gh-pages": "^4.0.0",
+    "react-scroll": "^1.8.8"
   }
 }
