@@ -45,6 +45,7 @@
   "devDependencies": {
     "@iconify/react": "^4.0.1",
     "gh-pages": "^4.0.0",
+    "react-router-dom": "^6.4.4",
     "react-scroll": "^1.8.8"
   }
 }
