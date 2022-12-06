@@ -55,7 +55,7 @@ function ContentArea () {
                         sx={{p:2}}
                     >
                         This project takes a view at a public-facing interface. Through observation of the interface use by other users,
-                        as well as interviews I was able to generate a set of personas and a storyboard for the given interface.
+                        as well as interviews, I was able to generate a set of personas and a storyboard for the given interface.
                     </Typography>
                     <Typography
                         variant="h4"
@@ -156,7 +156,7 @@ function ContentArea () {
                                 is needed. Most
                                 likely known from previous experience.
                             </p>
-                            <p>During interviews, I had three main questions for each user:</p>
+                            <p>During interviews, I had four main questions for each user:</p>
                             <ol id="questionList">
                                 <li>What item first draws your attention when looking at the system controls?</li>
                                 <li>What would you do to turn on the front left stove-top burner?</li>
@@ -226,7 +226,7 @@ function ContentArea () {
                     After observations and interviews with a set of users, I generated a set of empathy maps for two varying types of personas.
                     Each persona provides a different set of attributes based on the types of users that may use this interface. I noticed two types of
                     people who may use this appliance: those who are cooking just to eat, and would rather be doing something else, and those
-                    who enjoy the process of cooking more, and will spend more time doing it. See the below empathy maps:
+                    who enjoy the process of cooking more, and will spend more time doing it. See the empathy maps below:
                 </Typography>
 
                 <div id="mapContainer">
@@ -340,7 +340,7 @@ function ContentArea () {
                             sx={{p:2}}
                         >
                             Jeff forages quickly through the cabinet in the kitchen to find ramen, something extremely
-                            easy and quick to cook, which he takes out to eat.m.
+                            easy and quick to cook, which he takes out to eat.
                         </Typography>
                     </div>
                     <div className="individualStoryPanel">
@@ -419,7 +419,7 @@ function ContentArea () {
                             sx={{p:2}}
                         >
                             Once the timer runs out, the appliance beeps, signifying the finish of the ramen. In a speedy manner, Jeff
-                            turns off the stove. Once the burner light is off, he removes the pan from the stove, noting how he still
+                            turns off the stove. Once the burner light is off, he removes the pot from the stove, noting how he still
                             has time left to eat on the digital display, a helpful feature.
                         </Typography>
                     </div>
