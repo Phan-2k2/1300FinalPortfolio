@@ -40,7 +40,7 @@ function ContentArea () {
                    sx={{
                        color: "white"
                    }}>
-            <Grow in={introVisible} timeout={1000}>
+            <Grow in={introVisible} timeout={500}>
             <div id="intro" ref={introRef}>
                     <Typography
                         variant="h4"
@@ -86,7 +86,7 @@ function ContentArea () {
             </Grow>
 
             <div id="researchObservationsContainer">
-                <Grow in={indObsRefVis} timeout={1000}>
+                <Grow in={indObsRefVis} timeout={500}>
                     <div className="indObservation" ref={indObsRef}>
                         <Typography
                             variant="h4"
@@ -167,7 +167,7 @@ function ContentArea () {
                         </Typography>
                     </div>
                 </Grow>
-                <Grow in={indObsRef2Vis} timeout={1000}>
+                <Grow in={indObsRef2Vis} timeout={500}>
                     <div id="individualObsContainer" ref={indObsRef2}>
                         <div className="indObservation">
                             <Typography
@@ -209,7 +209,7 @@ function ContentArea () {
                     </div>
                 </Grow>
             </div>
-            <Grow in={EMVisible} timeout={1000}>
+            <Grow in={EMVisible} timeout={500}>
             <div id="empathyMapSection" ref={EMRef}>
                 <Typography
                     variant="h4"
@@ -288,7 +288,7 @@ function ContentArea () {
                 </div>
             </div>
             </Grow>
-            <Grow in={SBVisible} timeout={1000}>
+            <Grow in={SBVisible} timeout={500}>
             <div id="storyboardSection" ref={SBRef}>
                 <Typography
                     variant="h4"
@@ -441,7 +441,7 @@ function ContentArea () {
                 </Container>
             </div>
             </Grow>
-            <Grow in={conclusionVisible} timeout={1000}>
+            <Grow in={conclusionVisible} timeout={500}>
                 <div className="Conclusion" ref={conclusionRef}>
                     <Typography
                         variant="h4"
