@@ -1,17 +1,24 @@
 import {Box, Modal} from "@mui/material";
+import {useState} from "react";
 
 function Lightbox(props){
 
     const handleClose = () => props.setOpen(false);
 
+    const [width, setWidth] = useState(window.innerWidth);
+    const [height, setHeight] = useState(window.innerHeight);
+    function resize () {
+        setWidth(window.innerWidth);
+        setHeight(window.innerHeight);
+    }
 
+    window.addEventListener('resize', resize)
 
     const style = {
         position: 'absolute',
         top: '50%',
         left: '50%',
         transform: 'translate(-50%, -50%)',
-        height: "80vh",
         bgcolor: 'background.paper',
         border: '2px solid #000',
         boxShadow: 24,
@@ -19,7 +26,8 @@ function Lightbox(props){
     };
 
     const imgStyle = {
-        height: "100%"
+        width: (height > width) ? "80vw" : "auto",
+        height: (width > height) ? "80vh" : "auto",
     }
 
     return(
@@ -35,7 +43,7 @@ function Lightbox(props){
                          alt="Interface used: Stove Top and Oven Controls"/>
                 </Box>
             </Modal>
-    </div>
+        </div>
     )
 }
 export default Lightbox;

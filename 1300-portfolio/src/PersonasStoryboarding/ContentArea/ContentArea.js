@@ -26,7 +26,7 @@ function ContentArea () {
 
     return(
         <Container id="content"
-                   maxWidth='xl'
+                   maxWidth='lg'
                    sx={{
                        color: "white"
                    }}>

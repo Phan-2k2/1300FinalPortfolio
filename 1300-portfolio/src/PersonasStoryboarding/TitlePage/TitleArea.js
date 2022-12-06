@@ -13,6 +13,7 @@ function TitleArea (props) {
                     justifyContent: "center",
                     color: "white",
                     textAlign: "center",
+                    overflowWrap: "anywhere"
                 }}>
                     <Typography
                         variant="h3"

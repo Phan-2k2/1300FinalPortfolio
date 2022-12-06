@@ -27,7 +27,7 @@
     font-size: 1rem;
 }
 .storyPanelImg, .individualStoryPanel{
-    max-width: 30rem;
+    flex-basis: 45%;
 }
 .projectNavButtons{
     text-align: center;
