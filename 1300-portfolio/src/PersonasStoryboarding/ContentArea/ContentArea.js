@@ -23,6 +23,16 @@ function ContentArea () {
 
     const introRef = useRef();
     const introVisible = useIsVisible(introRef);
+    const indObsRef = useRef();
+    const indObsRefVis = useIsVisible(indObsRef);
+    const indObsRef2 = useRef();
+    const indObsRef2Vis = useIsVisible(indObsRef2);
+    const EMRef = useRef();
+    const EMVisible = useIsVisible(EMRef);
+    const SBRef = useRef();
+    const SBVisible = useIsVisible(SBRef);
+    const conclusionRef = useRef();
+    const conclusionVisible = useIsVisible(conclusionRef);
 
     return(
         <Container id="content"
@@ -76,127 +86,131 @@ function ContentArea () {
             </Grow>
 
             <div id="researchObservationsContainer">
-                <div className="indObservation">
-                    <Typography
-                        variant="h4"
-                        component="div"
-                        sx={{p:2}}
-                    >
-                        <b>Research Observations and Interview Summaries</b>
-                    </Typography>
-                    <Typography
-                        variant="body1"
-                        component="div"
-                        sx={{p:2}}
-                    >
-                        During the research process, I was able to observe and interview three
-                        different users which used the interface. Between each user there were definitely similarities
-                        and differences in processes as each one used the kitchen appliance. Here are my observations:
-                    </Typography>
-                    <Typography
-                        variant="h4"
-                        component="div"
-                        sx={{p:2}}
-                    >
-                        <b>General Observations</b>
-                    </Typography>
-                    <Typography
-                        variant="body1"
-                        component="div"
-                        sx={{p:2}}
-                    >
-                        <b>Common patterns for oven use:</b>
-                        <ul>
-                            <li>Press "On Button"</li>
-                            <li>Select type of use (Broil/Bake)</li>
-                            <li>Once temperature appears on digital display, use +/- buttons to control desired
-                                temperature.
-                            </li>
-                            <li>If timer is needed:
-                                <ul>
-                                    <li>Press "time" button, set timer using up/down buttons.</li>
-                                </ul>
-                            </li>
-                            <li>Cook!</li>
-                            <li>Press off button when done.</li>
-                        </ul>
-                        <b>Common patterns for stove top use:</b>
-                        <ul>
-                            <li>Determine which stove top to use first, find respective knob.</li>
-                            <li>Push in corresponding knob, twist to "LO" direction to start.</li>
-                            <li>Ensure "Burner On" light is lit.</li>
-                            <li>Cook!</li>
-                            <li>Turn knob to off position when done, ensure "Burner On" light turns off.</li>
-                        </ul>
-                        <p>Most users seemed fairly confident when using the stove top interface, but when
-                            tasked with operating the oven, showed a bit of confusion to which button corresponded to what,
-                            and
-                            in what exact order things needed to be pressed. One common thing is that each user only ever
-                            used one
-                            of the functions of the appliance at a time, either the oven or the stove top, not both.
-                            Notably, user 1, when using the
-                            stove, first tried to turn the knob to "HI" first, compared to user 3, who turned the knob to
-                            "LO" first. Users 2
-                            and 3, when setting the timer for cook time, both overshot their expected time and had to use
-                            the "-" button
-                            in order to return to their desired cook time. What I found interesting was that those who used
-                            the stove top
-                            burners didn't get confused about needing to push knob in, there are no indicators saying that
-                            is needed. Most
-                            likely known from previous experience.
-                        </p>
-                        <p>During interviews, I had three main questions for each user:</p>
-                        <ol id="questionList">
-                            <li>What item first draws your attention when looking at the system controls?</li>
-                            <li>What would you do to turn on the front left stove-top burner?</li>
-                            <li>What would you do to turn on the oven?</li>
-                            <li>Is there anything that you find frustrating or nice about this interface?</li>
-                        </ol>
-                        <p>Here is a compiled list of answers to these questions:</p>
-                    </Typography>
-
-                </div>
-                <div id="individualObsContainer">
-                    <div className="indObservation">
+                <Grow in={indObsRefVis} timeout={1000}>
+                    <div className="indObservation" ref={indObsRef}>
                         <Typography
                             variant="h4"
                             component="div"
                             sx={{p:2}}
                         >
-                            <b>Interview Question Observations:</b>
+                            <b>Research Observations and Interview Summaries</b>
                         </Typography>
                         <Typography
                             variant="body1"
                             component="div"
                             sx={{p:2}}
                         >
+                            During the research process, I was able to observe and interview three
+                            different users which used the interface. Between each user there were definitely similarities
+                            and differences in processes as each one used the kitchen appliance. Here are my observations:
+                        </Typography>
+                        <Typography
+                            variant="h4"
+                            component="div"
+                            sx={{p:2}}
+                        >
+                            <b>General Observations</b>
+                        </Typography>
+                        <Typography
+                            variant="body1"
+                            component="div"
+                            sx={{p:2}}
+                        >
+                            <b>Common patterns for oven use:</b>
                             <ul>
-                                <li>
-                                    Users note the simplistic nature of the stove controls, but also acknowledge the more complicated
-                                    stove controls. Users note uncertainty about some oven settings and timer controls.
+                                <li>Press "On Button"</li>
+                                <li>Select type of use (Broil/Bake)</li>
+                                <li>Once temperature appears on digital display, use +/- buttons to control desired
+                                    temperature.
                                 </li>
-                                <li>
-                                    Users note the first thing noticed is generally the digital display, which lights up and draws the
-                                    most attention, as well as providing useful information.
+                                <li>If timer is needed:
+                                    <ul>
+                                        <li>Press "time" button, set timer using up/down buttons.</li>
+                                    </ul>
                                 </li>
-                                <li>
-                                    Some users note how the interface is in general a bit slow, and that if in a rush, can overshoot
-                                    input of temperatures/times, needing to go back and fix it.
-                                </li>
-                                <li>
-                                    Users note helpfulness of burner diagrams and settings indicator lights as tools to assist use of
-                                    appliance.
-                                </li>
-                                <li>
-                                    Interestingly, one user even noted the oven controls to be too complicated, and instead using the
-                                    simpler, nearby toaster oven instead.
-                                </li>
+                                <li>Cook!</li>
+                                <li>Press off button when done.</li>
                             </ul>
+                            <b>Common patterns for stove top use:</b>
+                            <ul>
+                                <li>Determine which stove top to use first, find respective knob.</li>
+                                <li>Push in corresponding knob, twist to "LO" direction to start.</li>
+                                <li>Ensure "Burner On" light is lit.</li>
+                                <li>Cook!</li>
+                                <li>Turn knob to off position when done, ensure "Burner On" light turns off.</li>
+                            </ul>
+                            <p>Most users seemed fairly confident when using the stove top interface, but when
+                                tasked with operating the oven, showed a bit of confusion to which button corresponded to what,
+                                and
+                                in what exact order things needed to be pressed. One common thing is that each user only ever
+                                used one
+                                of the functions of the appliance at a time, either the oven or the stove top, not both.
+                                Notably, user 1, when using the
+                                stove, first tried to turn the knob to "HI" first, compared to user 3, who turned the knob to
+                                "LO" first. Users 2
+                                and 3, when setting the timer for cook time, both overshot their expected time and had to use
+                                the "-" button
+                                in order to return to their desired cook time. What I found interesting was that those who used
+                                the stove top
+                                burners didn't get confused about needing to push knob in, there are no indicators saying that
+                                is needed. Most
+                                likely known from previous experience.
+                            </p>
+                            <p>During interviews, I had three main questions for each user:</p>
+                            <ol id="questionList">
+                                <li>What item first draws your attention when looking at the system controls?</li>
+                                <li>What would you do to turn on the front left stove-top burner?</li>
+                                <li>What would you do to turn on the oven?</li>
+                                <li>Is there anything that you find frustrating or nice about this interface?</li>
+                            </ol>
+                            <p>Here is a compiled list of answers to these questions:</p>
                         </Typography>
                     </div>
-                </div>
+                </Grow>
+                <Grow in={indObsRef2Vis} timeout={1000}>
+                    <div id="individualObsContainer" ref={indObsRef2}>
+                        <div className="indObservation">
+                            <Typography
+                                variant="h4"
+                                component="div"
+                                sx={{p:2}}
+                            >
+                                <b>Interview Question Observations:</b>
+                            </Typography>
+                            <Typography
+                                variant="body1"
+                                component="div"
+                                sx={{p:2}}
+                            >
+                                <ul>
+                                    <li>
+                                        Users note the simplistic nature of the stove controls, but also acknowledge the more complicated
+                                        stove controls. Users note uncertainty about some oven settings and timer controls.
+                                    </li>
+                                    <li>
+                                        Users note the first thing noticed is generally the digital display, which lights up and draws the
+                                        most attention, as well as providing useful information.
+                                    </li>
+                                    <li>
+                                        Some users note how the interface is in general a bit slow, and that if in a rush, can overshoot
+                                        input of temperatures/times, needing to go back and fix it.
+                                    </li>
+                                    <li>
+                                        Users note helpfulness of burner diagrams and settings indicator lights as tools to assist use of
+                                        appliance.
+                                    </li>
+                                    <li>
+                                        Interestingly, one user even noted the oven controls to be too complicated, and instead using the
+                                        simpler, nearby toaster oven instead.
+                                    </li>
+                                </ul>
+                            </Typography>
+                        </div>
+                    </div>
+                </Grow>
             </div>
-            <div id="empathyMapSection">
+            <Grow in={EMVisible} timeout={1000}>
+            <div id="empathyMapSection" ref={EMRef}>
                 <Typography
                     variant="h4"
                     component="div"
@@ -273,7 +287,9 @@ function ContentArea () {
                     </div>
                 </div>
             </div>
-            <div id="storyboardSection">
+            </Grow>
+            <Grow in={SBVisible} timeout={1000}>
+            <div id="storyboardSection" ref={SBRef}>
                 <Typography
                     variant="h4"
                     component="div"
@@ -290,7 +306,13 @@ function ContentArea () {
                     details the story of a person who is under a time crunch, and wants to cook something as quickly as possible. It details
                     how he messes around with the interface in a haphazard manner in the name of speed, all to make a bowl of overcooked ramen.
                     </Typography>
-               <div id="storyboardContainer">
+                <Container sx={{
+                    display: {xs: "block", sm: "flex"},
+                    flexDirection: "row",
+                    flexWrap: "wrap",
+                    justifyContent: "space-evenly",
+                    alignItems: "stretch",
+                }}>
                     <div className="individualStoryPanel">
                         <div style={{textAlign: "center"}} onClick={() => setSB1(true)}>
                             <img className="storyPanelImg" src={require("../Images/storyboard/1.png")}
@@ -416,36 +438,38 @@ function ContentArea () {
                             but Jeff enjoys his noodles anyway. Use of kitchen appliance accomplished!
                         </Typography>
                     </div>
+                </Container>
+            </div>
+            </Grow>
+            <Grow in={conclusionVisible} timeout={1000}>
+                <div className="Conclusion" ref={conclusionRef}>
+                    <Typography
+                        variant="h4"
+                        component="div"
+                        sx={{p:2}}
+                    >
+                        <b>Conclusion</b>
+                    </Typography>
+                    <Typography
+                        variant="body1"
+                        component="div"
+                        sx={{p:2}}
+                    >
+                        All done! From this project, I was able to select an interface, observe users, and generate useful tools
+                        which represent different types of users. These tools can help me come to a better understanding overall
+                        of how the interface is used, and how it can be improved to better cater to the users observed during the
+                        project. Understanding your users is crucial to understanding how you can better tailor a product to a user's
+                        needs. These empathy maps and storyboards help me understand truly what the user is thinking, and what I
+                        can do to make the frustrations and grievances disappear.
+                    </Typography>
+                    <div className="projectNavButtons">
+                        <Button onClick={() => {scroll.scrollToTop()}} size="large" sx={{ color: '#fff', background: "#000", '&:hover' :  {background: "#fff", color: "#000"}}}>Scroll To Top</Button>
+                        <NavLink to={"/1300FinalPortfolio"} style={{textDecoration: 'none'}}>
+                            <Button size="large" sx={{ color: '#fff', background: "#000", '&:hover' :  {background: "#fff", color: "#000"}}}>Return Home</Button>
+                        </NavLink>
+                    </div>
                 </div>
-            </div>
-
-            <Typography
-                variant="h4"
-                component="div"
-                sx={{p:2}}
-            >
-                <b>Conclusion</b>
-            </Typography>
-            <Typography
-                variant="body1"
-                component="div"
-                sx={{p:2}}
-            >
-                All done! From this project, I was able to select an interface, observe users, and generate useful tools
-                which represent different types of users. These tools can help me come to a better understanding overall
-                of how the interface is used, and how it can be improved to better cater to the users observed during the
-                project. Understanding your users is crucial to understanding how you can better tailor a product to a user's
-                needs. These empathy maps and storyboards help me understand truly what the user is thinking, and what I
-                can do to make the frustrations and grievances disappear.
-            </Typography>
-
-            <div className="projectNavButtons">
-                <Button onClick={() => {scroll.scrollToTop()}} size="large" sx={{ color: '#fff', background: "#000", '&:hover' :  {background: "#fff", color: "#000"}}}>Scroll To Top</Button>
-                <NavLink to={"/1300FinalPortfolio"} style={{textDecoration: 'none'}}>
-                    <Button size="large" sx={{ color: '#fff', background: "#000", '&:hover' :  {background: "#fff", color: "#000"}}}>Return Home</Button>
-                </NavLink>
-            </div>
-
+            </Grow>
         </Container>
     )
 }
