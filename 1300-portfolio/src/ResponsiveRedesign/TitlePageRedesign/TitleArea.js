@@ -1,12 +1,16 @@
 import './TitleArea.css'
 import {Container, Grow, Typography} from "@mui/material";
+import {useRef} from "react";
+import {useIsVisible} from "../../MainPage/MainPage";
 
 function TitleArea (props) {
 
+    let titleRef = useRef();
+    let isVisible = useIsVisible(titleRef);
 
     return(
-        <div id="titleAreaPersonas" ref={props.titleRef}>
-            <Grow in={props.isVisible} timeout={1000}>
+        <div id="titleAreaRedesign" ref={titleRef}>
+            <Grow in={isVisible} timeout={1000}>
                 <Container sx={{
                     display: "flex",
                     alignItems: "center",
@@ -20,13 +24,13 @@ function TitleArea (props) {
                         component="div"
                         sx={{p:2}}
                         color={"black"}
-                    > Personas and Storyboarding
+                    > <b>Responsive Redesign</b>
                         {
                             <Typography
                                 variant="h6"
                                 component="div"
                                 sx={{p:2}}
-                            > Understanding interfaces and their users.
+                            >Redesigning an outdated website.
                             </Typography>
                         }
                     </Typography>

@@ -1,16 +1,20 @@
 import './TitleArea.css'
 import {Container, Grow, Typography} from "@mui/material";
+import {useRef} from "react";
+import {useIsVisible} from "../../MainPage/MainPage";
 
 function TitleArea (props) {
 
+    const titleRef = useRef();
+    const isVisibleTitle = useIsVisible(titleRef);
 
     return(
-        <div id="titleAreaMain" ref={props.titleRef}>
-            <Grow in={props.isVisible} timeout={1000}>
+        <div id="titleAreaPersonas" ref={titleRef}>
+            <Grow in={isVisibleTitle} timeout={1000}>
                 <Container sx={{
                     display: "flex",
                     alignItems: "center",
-                    justifyContent: "right",
+                    justifyContent: "center",
                     color: "white",
                     textAlign: "center",
                     overflowWrap: "anywhere"
@@ -19,13 +23,14 @@ function TitleArea (props) {
                         variant="h3"
                         component="div"
                         sx={{p:2}}
-                    > <b>Hey! I'm Crazy Koala 555.</b>
+                        color={"black"}
+                    > <b>Personas and Storyboarding</b>
                         {
                             <Typography
                                 variant="h6"
                                 component="div"
                                 sx={{p:2}}
-                            > I'm glad you're here. I'm a UI/UX Designer.
+                            > Understanding an interface and its users.
                             </Typography>
                         }
                     </Typography>
