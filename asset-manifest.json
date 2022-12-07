@@ -1,10 +1,12 @@
 {
   "files": {
-    "main.css": "/1300FinalPortfolio/static/css/main.62e14782.css",
-    "main.js": "/1300FinalPortfolio/static/js/main.5155844e.js",
+    "main.css": "/1300FinalPortfolio/static/css/main.98ddb339.css",
+    "main.js": "/1300FinalPortfolio/static/js/main.76392901.js",
     "static/media/main-background-blurred2.jpg": "/1300FinalPortfolio/static/media/main-background-blurred2.b09d25b16a57a39746f7.jpg",
+    "static/media/consolidatedTabletHifi.jpg": "/1300FinalPortfolio/static/media/consolidatedTabletHifi.65131af30c5e19529818.jpg",
     "static/media/redesign-blurred.jpg": "/1300FinalPortfolio/static/media/redesign-blurred.bda5733d43f2664b9bf1.jpg",
     "static/media/1.png": "/1300FinalPortfolio/static/media/1.4cbfe5fd50d2cc723b81.png",
+    "static/media/consolidatedPhoneHifi.jpg": "/1300FinalPortfolio/static/media/consolidatedPhoneHifi.ad8565a5f77884042b04.jpg",
     "static/media/2.png": "/1300FinalPortfolio/static/media/2.98293fe36bace9cb382c.png",
     "static/media/interface-sketch.png": "/1300FinalPortfolio/static/media/interface-sketch.17b11e2d88e6612c45ff.png",
     "static/media/Tablet-annotated.png": "/1300FinalPortfolio/static/media/Tablet-annotated.6196d06b33055799b7e7.png",
@@ -23,11 +25,11 @@
     "static/media/styleGuide.png": "/1300FinalPortfolio/static/media/styleGuide.779f42df23b085e3f539.png",
     "static/media/3_2.png": "/1300FinalPortfolio/static/media/3_2.bb045bd4bf800632ecbf.png",
     "index.html": "/1300FinalPortfolio/index.html",
-    "main.62e14782.css.map": "/1300FinalPortfolio/static/css/main.62e14782.css.map",
-    "main.5155844e.js.map": "/1300FinalPortfolio/static/js/main.5155844e.js.map"
+    "main.98ddb339.css.map": "/1300FinalPortfolio/static/css/main.98ddb339.css.map",
+    "main.76392901.js.map": "/1300FinalPortfolio/static/js/main.76392901.js.map"
   },
   "entrypoints": [
-    "static/css/main.62e14782.css",
-    "static/js/main.5155844e.js"
+    "static/css/main.98ddb339.css",
+    "static/js/main.76392901.js"
   ]
 }
