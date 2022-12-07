@@ -1,11 +1,12 @@
 {
   "files": {
-    "main.css": "/1300FinalPortfolio/static/css/main.41e86a91.css",
-    "main.js": "/1300FinalPortfolio/static/js/main.a1a09b1b.js",
+    "main.css": "/1300FinalPortfolio/static/css/main.f2ea09b7.css",
+    "main.js": "/1300FinalPortfolio/static/js/main.125d2be9.js",
     "static/media/user_testing_3.mp4": "/1300FinalPortfolio/static/media/user_testing_3.9293a7230ca7e5bf3a17.mp4",
     "static/media/user_testing_1.mp4": "/1300FinalPortfolio/static/media/user_testing_1.cc215d725ebd9700f55f.mp4",
     "static/media/user_testing_2.mp4": "/1300FinalPortfolio/static/media/user_testing_2.f16933299bf3e82bc115.mp4",
     "static/media/high_fidelity_walkthrough.mov": "/1300FinalPortfolio/static/media/high_fidelity_walkthrough.42bcf2047c3f3a6e0dc3.mov",
+    "static/media/mainpage.png": "/1300FinalPortfolio/static/media/mainpage.578ac06a0995b0df0a0a.png",
     "static/media/updated-site.jpeg": "/1300FinalPortfolio/static/media/updated-site.1efb0fe79f8585188dfa.jpeg",
     "static/media/consolidatedTabletHifi.jpg": "/1300FinalPortfolio/static/media/consolidatedTabletHifi.65131af30c5e19529818.jpg",
     "static/media/redesign-blurred.jpg": "/1300FinalPortfolio/static/media/redesign-blurred.bda5733d43f2664b9bf1.jpg",
@@ -21,6 +22,7 @@
     "static/media/6.png": "/1300FinalPortfolio/static/media/6.07f94943c3d67221b89e.png",
     "static/media/btkd-capture.jpeg": "/1300FinalPortfolio/static/media/btkd-capture.5ebdcd9251fb174b86cc.jpeg",
     "static/media/sketch2.jpg": "/1300FinalPortfolio/static/media/sketch2.34e09793bda6bfa8c697.jpg",
+    "static/media/development-blurred.jpg": "/1300FinalPortfolio/static/media/development-blurred.92b4c821566df6369da4.jpg",
     "static/media/4.png": "/1300FinalPortfolio/static/media/4.ead3aaf4416c58967f46.png",
     "static/media/7.png": "/1300FinalPortfolio/static/media/7.5d791a81882248b91b46.png",
     "static/media/personas-background-blurred.jpg": "/1300FinalPortfolio/static/media/personas-background-blurred.b7580b5601c39e9082ce.jpg",
@@ -38,11 +40,11 @@
     "static/media/main-background-blurred2.jpg": "/1300FinalPortfolio/static/media/main-background-blurred2.05469625562f5c1c17e7.jpg",
     "static/media/iterative2-blurred.jpg": "/1300FinalPortfolio/static/media/iterative2-blurred.168e81665a38099fd430.jpg",
     "index.html": "/1300FinalPortfolio/index.html",
-    "main.41e86a91.css.map": "/1300FinalPortfolio/static/css/main.41e86a91.css.map",
-    "main.a1a09b1b.js.map": "/1300FinalPortfolio/static/js/main.a1a09b1b.js.map"
+    "main.f2ea09b7.css.map": "/1300FinalPortfolio/static/css/main.f2ea09b7.css.map",
+    "main.125d2be9.js.map": "/1300FinalPortfolio/static/js/main.125d2be9.js.map"
   },
   "entrypoints": [
-    "static/css/main.41e86a91.css",
-    "static/js/main.a1a09b1b.js"
+    "static/css/main.f2ea09b7.css",
+    "static/js/main.125d2be9.js"
   ]
 }
