@@ -1,27 +1,20 @@
 @import "react-slideshow-image/dist/styles.css";
 
-#oldSiteImage{
-    width: 90%;
-    padding-bottom: 5px;
-}
 a {
     color: white;
 }
-.lofiImages{
-    width: 50%;
+.sketches{
+    width: 80%;
 }
-#colorStyleGuide{
-    width: 85%;
-}
-.slideImageW{
+.lofiFC, .hifiFC, .updatedhifiFC{
     width: 100%;
 }
-#phoneSlides{
-    width: 20vw;
+#hifi2{
+    text-align: center;
 }
-#phoneHifi, #tabletHifi{
-    width: 100%;
-}
-#finalUpdate{
-    width: 85%;
+#testingVideos{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
