@@ -1,9 +1,11 @@
-import {Container, Grow, Typography} from "@mui/material";
+import {Button, Container, Grow, Typography} from "@mui/material";
 import './ContentArea.css'
 import Lightbox from "../../Lightbox";
 import {useRef, useState} from "react";
 import {useIsVisible} from "../../MainPage/MainPage";
 import {Slide} from "react-slideshow-image";
+import {animateScroll as scroll} from "react-scroll";
+import {NavLink} from "react-router-dom";
 
 function ContentArea () {
 
@@ -15,7 +17,7 @@ function ContentArea () {
 
     // const [PHifiLB, setPHifiLB] = useState(false);
     // const [THifiLB, setTHifiLB] = useState(false);
-
+    const [redesign, setRedesign] = useState(false);
 
     const introRef = useRef();
     const introVisible = useIsVisible(introRef);
@@ -25,7 +27,16 @@ function ContentArea () {
     const mockupIntroRefVisible = useIsVisible(mockupIntroRef);
     const lofiGalleryRef = useRef();
     const lofiGalleryVisible = useIsVisible(lofiGalleryRef);
-
+    const guideRef = useRef();
+    const guideVisible = useIsVisible(guideRef);
+    const hifiRef = useRef();
+    const hifiVisible = useIsVisible(hifiRef);
+    const hifi2Ref = useRef();
+    const hifi2Visible = useIsVisible(hifi2Ref);
+    const finalRef = useRef();
+    const finalVisible = useIsVisible(finalRef);
+    const conclusionRef = useRef();
+    const conclusionVisible = useIsVisible(conclusionRef);
 
     return(
         <Container id="content"
@@ -218,120 +229,176 @@ function ContentArea () {
                             <Lightbox isOpen={TlofiLB} setOpen={setTlofiLB} srcImage={require('../Images/lofiWireframes/Tablet-annotated.png')}/>
                         </div>
                     </Grow>
+                    <Grow in={guideVisible} timeout={500}>
+                        <div ref={guideRef}>
+                            <Typography
+                                variant="h5"
+                                component="div"
+                                sx={{pt:2}}
+                            >
+                                <b>Visual Design Guide</b>
+                            </Typography>
+                            <Typography
+                                variant="body1"
+                                component="div"
+                                sx={{p:2}}
+                            >
+                                <p >After finishing the low-fidelity wireframes in Balsamiq, I generated a style
+                                    guide for the website. It contains:</p>
+                                <ul>
+                                    <li>Buttons, with their respective hover changes.</li>
+                                    <li>A color palate, surrounding the red/neutral color aesthetic employed by the original
+                                        website.
+                                    </li>
+                                    <li>Text sizing and fonts, using the font Sui Generis as well as a sans-serif font.</li>
+                                    <li>The icons being used for the site.</li>
+                                    <li>The navigation menu/systems being used for the site.</li>
+                                </ul>
+                                <p >It's extremely helpful for keeping a consistent style across all aspects of the site,
+                                    creating a more cohesive theme.</p>
+                            </Typography>
+                            <div style={{textAlign: "center"}} onClick={() => setGuideLB(true)}>
+                                <img id="colorStyleGuide" src={require('../Images/hifiPrototypes/styleGuide.png')}
+                                     alt="Style Guide"/>
+                            </div>
+                            <Lightbox isOpen={guideLB} setOpen={setGuideLB} srcImage={require('../Images/hifiPrototypes/styleGuide.png')}/>
 
-                    <Typography
-                        variant="h5"
-                        component="div"
-                        sx={{pt:2}}
-                    >
-                        <b>Visual Design Guide</b>
-                    </Typography>
-                    <Typography
-                        variant="body1"
-                        component="div"
-                        sx={{p:2}}
-                    >
-                        <p >After finishing the low-fidelity wireframes in Balsamiq, I generated a style
-                            guide for the website. It contains:</p>
-                        <ul>
-                            <li>Buttons, with their respective hover changes.</li>
-                            <li>A color palate, surrounding the red/neutral color aesthetic employed by the original
-                                website.
-                            </li>
-                            <li>Text sizing and fonts, using the font Sui Generis as well as a sans-serif font.</li>
-                            <li>The icons being used for the site.</li>
-                            <li>The navigation menu/systems being used for the site.</li>
-                        </ul>
-                        <p >It's extremely helpful for keeping a consistent style across all aspects of the site,
-                        creating a more cohesive theme.</p>
-                    </Typography>
-                    <div style={{textAlign: "center"}} onClick={() => setGuideLB(true)}>
-                        <img id="colorStyleGuide" src={require('../Images/hifiPrototypes/styleGuide.png')}
-                             alt="Style Guide"/>
-                    </div>
-                    <Lightbox isOpen={guideLB} setOpen={setGuideLB} srcImage={require('../Images/hifiPrototypes/styleGuide.png')}/>
-                    <Typography
-                        variant="h5"
-                        component="div"
-                        sx={{pt:2}}
-                    >
-                        <b>High-Fidelity Prototypes</b>
-                    </Typography>
-                    <Typography
-                        variant="body1"
-                        component="div"
-                        sx={{p:2}}
-                    >
-                        <p>
-                            After creating a general idea of what I wanted in the form of wireframes, and then designing
-                            a consistent style guide, I moved to Figma to create a high fidelity prototype. The prototypes
-                            all take the same elements and follow style guidelines. Elements are reshuffled around and resize
-                            as per necessary when different formats are required.
-                        </p>
-                    </Typography>
+                        </div>
+                    </Grow>
+                    <Grow in={hifiVisible} timeout={500}>
+                        <div ref={hifiRef}>
+                            <Typography
+                                variant="h5"
+                                component="div"
+                                sx={{pt:2}}
+                            >
+                                <b>High-Fidelity Prototypes</b>
+                            </Typography>
+                            <Typography
+                                variant="body1"
+                                component="div"
+                                sx={{p:2}}
+                            >
+                                <p>
+                                    After creating a general idea of what I wanted in the form of wireframes, and then designing
+                                    a consistent style guide, I moved to Figma to create a high fidelity prototype. The prototypes
+                                    all take the same elements and follow style guidelines. Elements are reshuffled around and resize
+                                    as per necessary when different formats are required.
+                                </p>
+                            </Typography>
 
-                    <Typography
-                        variant="h5"
-                        component="div"
-                        sx={{pt:2}}
-                    >
-                        <b>Desktop Prototypes</b>
-                    </Typography>
-                    <Slide cssClass="slides" autoplay={false}>
-                        <div className="each-slide">
-                            <img className="slideImageW" src={require("../Images/hifiPrototypes/desktop/1.png")} alt="sample" />
-                                <span></span>
+                            <Typography
+                                variant="h5"
+                                component="div"
+                                sx={{pt:2}}
+                            >
+                                <b>Desktop Prototypes</b>
+                            </Typography>
+                            <Slide cssClass="slides" autoplay={false}>
+                                <div className="each-slide">
+                                    <img className="slideImageW" src={require("../Images/hifiPrototypes/desktop/1.png")} alt="sample" />
+                                    <span></span>
+                                </div>
+                                <div className="each-slide">
+                                    <img className="slideImageW" src={require("../Images/hifiPrototypes/desktop/2.png")} alt="sample" />
+                                    <span></span>
+                                </div>
+                                <div className="each-slide">
+                                    <img className="slideImageW" src={require("../Images/hifiPrototypes/desktop/3.png")} alt="sample" />
+                                    <span></span>
+                                </div>
+                            </Slide>
                         </div>
-                        <div className="each-slide">
-                            <img className="slideImageW" src={require("../Images/hifiPrototypes/desktop/2.png")} alt="sample" />
-                            <span></span>
+                    </Grow>
+                    <Grow in={hifi2Visible} timeout={500}>
+                        <div ref={hifi2Ref}>
+                            <Typography
+                                variant="h5"
+                                component="div"
+                                sx={{pt:2}}
+                            >
+                                <b>Phone Prototypes</b>
+                            </Typography>
+                            <div style={{textAlign: "center"}}>
+                                <img id="phoneHifi" src={require('../Images/hifiPrototypes/phone/consolidatedPhoneHifi.jpg')}
+                                     alt="Phone Hi fi prototypes"/>
+                            </div>
+                            {/*<Lightbox isOpen={PHifiLB} setOpen={setPHifiLB} srcImage={require('../Images/hifiPrototypes/phone/consolidatedPhoneHifi.jpg')}/>*/}
+                            <Typography
+                                variant="h5"
+                                component="div"
+                                sx={{pt:2}}
+                            >
+                                <b>Tablet Prototypes</b>
+                            </Typography>
+                            <div style={{textAlign: "center"}}>
+                                <img id="tabletHifi" src={require('../Images/hifiPrototypes/tablet/consolidatedTabletHifi.jpg')}
+                                     alt="Tablet Hi fi prototypes"/>
+                            </div>
+                            {/*<Lightbox isOpen={THifiLB} setOpen={setTHifiLB} srcImage={require('../Images/hifiPrototypes/tablet/consolidatedTabletHifi.jpg')}/>*/}
                         </div>
-                        <div className="each-slide">
-                            <img className="slideImageW" src={require("../Images/hifiPrototypes/desktop/3.png")} alt="sample" />
-                            <span></span>
-                        </div>
-                    </Slide>
-                    <Typography
-                        variant="h5"
-                        component="div"
-                        sx={{pt:2}}
-                    >
-                        <b>Phone Prototypes</b>
-                    </Typography>
-                    <div style={{textAlign: "center"}}>
-                        <img id="phoneHifi" src={require('../Images/hifiPrototypes/phone/consolidatedPhoneHifi.jpg')}
-                             alt="Phone Hi fi prototypes"/>
-                    </div>
-                    {/*<Lightbox isOpen={PHifiLB} setOpen={setPHifiLB} srcImage={require('../Images/hifiPrototypes/phone/consolidatedPhoneHifi.jpg')}/>*/}
-                    <Typography
-                        variant="h5"
-                        component="div"
-                        sx={{pt:2}}
-                    >
-                        <b>Tablet Prototypes</b>
-                    </Typography>
-                    <div style={{textAlign: "center"}}>
-                        <img id="tabletHifi" src={require('../Images/hifiPrototypes/tablet/consolidatedTabletHifi.jpg')}
-                             alt="Tablet Hi fi prototypes"/>
-                    </div>
-                    {/*<Lightbox isOpen={THifiLB} setOpen={setTHifiLB} srcImage={require('../Images/hifiPrototypes/tablet/consolidatedTabletHifi.jpg')}/>*/}
+                    </Grow>
                 </div>
-            <Typography
-                variant="h4"
-                component="div"
-                sx={{pt:2}}
-            >
-                <b>Doing it in code!</b>
-            </Typography>
-            <Typography
-                variant="body1"
-                component="div"
-                sx={{p:2}}
-            >
-                Once I finished mocking up everything, I went ahead and began designing the static site.
-                Find the link to the website <a href="https://crazykoala555.github.io/Responsive-Redesign/" rel="noreferrer" target="_blank">here</a>.
-
-            </Typography>
+            <Grow in={finalVisible} timeout={500}>
+                <div ref={finalRef}>
+                    <Typography
+                        variant="h4"
+                        component="div"
+                        sx={{pt:2}}
+                    >
+                        <b>Doing it in code!</b>
+                    </Typography>
+                    <Typography
+                        variant="body1"
+                        component="div"
+                        sx={{p:2}}
+                    >
+                        Once I finished mocking up everything, I went ahead and began designing the static site. Various flex boxes, as well as a menu that resized
+                        based on the width of the window, I was able to create a more responsive and modernized site. It addresses the issues related to announcements,
+                        useful links, as well as non-image headers. It uses the calendar plugin effectively, and makes it much easier for mobile users to
+                        access the site more efficiently.
+                        Find the link to the website <a href="https://crazykoala555.github.io/Responsive-Redesign/" rel="noreferrer" target="_blank">here</a>!
+                    </Typography>
+                    <div style={{textAlign: "center"}} onClick={() => {setRedesign(true)}}>
+                        <img id="finalUpdate" src={require('../Images/updated-site.jpeg')}
+                             alt="Final redesigned site."/>
+                    </div>
+                    <Lightbox isOpen={redesign} setOpen={setRedesign} srcImage={require('../Images/updated-site.jpeg')}/>
+                </div>
+            </Grow>
+            <Grow in={conclusionVisible} timeout={500}>
+                <div ref={conclusionRef}>
+                    <Typography
+                        variant="h4"
+                        component="div"
+                        sx={{pt:2}}
+                    >
+                        <b>Conclusion</b>
+                    </Typography>
+                    <Typography
+                        variant="body1"
+                        component="div"
+                        sx={{p:2}}
+                    >
+                        All in all, I was fairly successful in creating a better site. Here are the more notable improvements:
+                        <ul>
+                            <li>Better responsiveness with different screen formats.</li>
+                            <li>Items scale to fill up screen to full effect.</li>
+                            <li>Announcements are seperated from one another and rearrange themselves when formats change.</li>
+                            <li>More cohesive color schemes used.</li>
+                            <li>Easier to access and more mobile-friendly buttons.</li>
+                            <li>Navigation bar collapses on mobile devices and makes site overall easier to read and navigate.</li>
+                        </ul>
+                        With these improvements, I was able to create an overall improved website, incorporating responsive elements.
+                    </Typography>
+                    <div className="projectNavButtons">
+                        <Button onClick={() => {scroll.scrollToTop()}} size="large" sx={{ color: '#fff', background: "#000", '&:hover' :  {background: "#fff", color: "#000"}}}>Scroll To Top</Button>
+                        <NavLink to={"/1300FinalPortfolio"} style={{textDecoration: 'none'}}>
+                            <Button size="large" sx={{ color: '#fff', background: "#000", '&:hover' :  {background: "#fff", color: "#000"}}}>Return Home</Button>
+                        </NavLink>
+                    </div>
+                </div>
+            </Grow>
         </Container>
     )
 }
