@@ -13,13 +13,19 @@ function ContentArea () {
     const [TlofiLB, setTlofiLB] = useState(false);
     const [guideLB, setGuideLB] = useState(false);
 
+    // const [PHifiLB, setPHifiLB] = useState(false);
+    // const [THifiLB, setTHifiLB] = useState(false);
+
 
     const introRef = useRef();
     const introVisible = useIsVisible(introRef);
     const analysisRef = useRef();
     const analysisVisible = useIsVisible(analysisRef);
-    const mockupRef = useRef();
-    const mockupVisible = useIsVisible(mockupRef);
+    const mockupIntroRef = useRef();
+    const mockupIntroRefVisible = useIsVisible(mockupIntroRef);
+    const lofiGalleryRef = useRef();
+    const lofiGalleryVisible = useIsVisible(lofiGalleryRef);
+
 
     return(
         <Container id="content"
@@ -154,58 +160,64 @@ function ContentArea () {
                     </Typography>
                 </div>
             </Grow>
-            <Grow in={mockupVisible} timeout={500}>
-                <div ref={mockupRef} id="mockupSection">
-                    <Typography
-                        variant="h2"
-                        component="div"
-                        sx={{}}
-                    >
-                        <b>Visual Redesign</b>
-                    </Typography>
-                    <Typography
-                        variant="h5"
-                        component="div"
-                        sx={{}}
-                    >
-                        <b>Low-Fidelity Wireframe</b>
-                    </Typography>
-                    <Typography
-                        variant="body1"
-                        component="div"
-                        sx={{p:2}}
-                    >
-                        <p >
-                            Beginning with a low-fidelity wireframe, I turn to Balsamiq. I generated wireframes for 3
-                            different types of devices,
-                            namely desktop browser use, phone use, and vertical tablet use. Since this page is
-                            scrollable, I the right wireframes
-                            for each respective devices is a "scrolled down" version. Note: mobile versions will show
-                            one announcement, but will normally
-                            show 3 (1 used for illustrative purposes).
-                            <br/><br/>
-                            All wireframes more or less share the same improvements. The greatest difference exists
-                            between the scaling
-                            between devices, the content is improved across the board, as the same assets are used.
-                        </p>
-                    </Typography>
-                    <div id="lofiGalleries">
-                        <div style={{textAlign: "center"}} onClick={() => setPlofiLB(true)}>
-                            <img className="lofiImages" src={require('../Images/lofiWireframes/Phone-annotated.png')}
-                                 alt="Phone wireframe."/>
+                <div id="mockupSection">
+                    <Grow in={mockupIntroRefVisible} timeout={500}>
+                        <div ref={mockupIntroRef} id="mockupIntro">
+                            <Typography
+                            variant="h2"
+                            component="div"
+                            sx={{}}
+                            >
+                                <b>Visual Redesign</b>
+                            </Typography>
+                            <Typography
+                                variant="h5"
+                                component="div"
+                                sx={{}}
+                            >
+                                <b>Low-Fidelity Wireframe</b>
+                            </Typography>
+                            <Typography
+                                variant="body1"
+                                component="div"
+                                sx={{p:2}}
+                            >
+                                <p >
+                                    Beginning with a low-fidelity wireframe, I turn to Balsamiq. I generated wireframes for 3
+                                    different types of devices,
+                                    namely desktop browser use, phone use, and vertical tablet use. Since this page is
+                                    scrollable, I the right wireframes
+                                    for each respective devices is a "scrolled down" version. Note: mobile versions will show
+                                    one announcement, but will normally
+                                    show 3 (1 used for illustrative purposes).
+                                    <br/><br/>
+                                    All wireframes more or less share the same improvements. The greatest difference exists
+                                    between the scaling
+                                    between devices, the content is improved across the board, as the same assets are used.
+                                </p>
+                            </Typography>
                         </div>
-                        <Lightbox isOpen={PlofiLB} setOpen={setPlofiLB} srcImage={require('../Images/lofiWireframes/Phone-annotated.png')}/>
-                        <div style={{textAlign: "center"}} onClick={() => setDlofiLB(true)}>
-                            <img className="lofiImages" src={require('../Images/lofiWireframes/Desktop-annotated.png')}
-                                 alt="Desktop wireframe."/>
+                    </Grow>
+
+                    <Grow in={lofiGalleryVisible} timeout={1000}>
+                        <div id="lofiGalleries" ref={lofiGalleryRef}>
+                            <div style={{textAlign: "center"}} onClick={() => setPlofiLB(true)}>
+                                <img className="lofiImages" src={require('../Images/lofiWireframes/Phone-annotated.png')}
+                                     alt="Phone wireframe."/>
+                            </div>
+                            <Lightbox isOpen={PlofiLB} setOpen={setPlofiLB} srcImage={require('../Images/lofiWireframes/Phone-annotated.png')}/>
+                            <div style={{textAlign: "center"}} onClick={() => setDlofiLB(true)}>
+                                <img className="lofiImages" src={require('../Images/lofiWireframes/Desktop-annotated.png')}
+                                     alt="Desktop wireframe."/>
+                            </div>
+                            <Lightbox isOpen={DlofiLB} setOpen={setDlofiLB} srcImage={require('../Images/lofiWireframes/Desktop-annotated.png')}/>
+                            <div style={{textAlign: "center"}} onClick={() => setTlofiLB(true)}>
+                                <img className="lofiImages" src={require('../Images/lofiWireframes/Tablet-annotated.png')}
+                                     alt="Tablet Wireframe."/>
+                            </div>
+                            <Lightbox isOpen={TlofiLB} setOpen={setTlofiLB} srcImage={require('../Images/lofiWireframes/Tablet-annotated.png')}/>
                         </div>
-                        <Lightbox isOpen={DlofiLB} setOpen={setDlofiLB} srcImage={require('../Images/lofiWireframes/Desktop-annotated.png')}/>
-                        <div style={{textAlign: "center"}} onClick={() => setTlofiLB(true)}>
-                            <img className="lofiImages" src={require('../Images/lofiWireframes/Tablet-annotated.png')}
-                                 alt="Tablet Wireframe."/>
-                        </div>
-                        <Lightbox isOpen={TlofiLB} setOpen={setTlofiLB} srcImage={require('../Images/lofiWireframes/Tablet-annotated.png')}/>
-                    </div>
+                    </Grow>
 
                     <Typography
                         variant="h5"
@@ -238,7 +250,6 @@ function ContentArea () {
                              alt="Style Guide"/>
                     </div>
                     <Lightbox isOpen={guideLB} setOpen={setGuideLB} srcImage={require('../Images/hifiPrototypes/styleGuide.png')}/>
-
                     <Typography
                         variant="h5"
                         component="div"
@@ -258,25 +269,69 @@ function ContentArea () {
                             as per necessary when different formats are required.
                         </p>
                     </Typography>
-                    <div>
 
-                    </div>
-                    <Slide cssClass="slides">
+                    <Typography
+                        variant="h5"
+                        component="div"
+                        sx={{pt:2}}
+                    >
+                        <b>Desktop Prototypes</b>
+                    </Typography>
+                    <Slide cssClass="slides" autoplay={false}>
                         <div className="each-slide">
-                            <img className="slideImageH" src={require("../Images/hifiPrototypes/desktop/1.png")} alt="sample" />
+                            <img className="slideImageW" src={require("../Images/hifiPrototypes/desktop/1.png")} alt="sample" />
                                 <span></span>
                         </div>
                         <div className="each-slide">
-                            <img className="slideImageH" src={require("../Images/hifiPrototypes/desktop/2.png")} alt="sample" />
+                            <img className="slideImageW" src={require("../Images/hifiPrototypes/desktop/2.png")} alt="sample" />
                             <span></span>
                         </div>
                         <div className="each-slide">
-                            <img className="slideImageH" src={require("../Images/hifiPrototypes/desktop/3.png")} alt="sample" />
+                            <img className="slideImageW" src={require("../Images/hifiPrototypes/desktop/3.png")} alt="sample" />
                             <span></span>
                         </div>
                     </Slide>
+                    <Typography
+                        variant="h5"
+                        component="div"
+                        sx={{pt:2}}
+                    >
+                        <b>Phone Prototypes</b>
+                    </Typography>
+                    <div style={{textAlign: "center"}}>
+                        <img id="phoneHifi" src={require('../Images/hifiPrototypes/phone/consolidatedPhoneHifi.jpg')}
+                             alt="Phone Hi fi prototypes"/>
+                    </div>
+                    {/*<Lightbox isOpen={PHifiLB} setOpen={setPHifiLB} srcImage={require('../Images/hifiPrototypes/phone/consolidatedPhoneHifi.jpg')}/>*/}
+                    <Typography
+                        variant="h5"
+                        component="div"
+                        sx={{pt:2}}
+                    >
+                        <b>Tablet Prototypes</b>
+                    </Typography>
+                    <div style={{textAlign: "center"}}>
+                        <img id="tabletHifi" src={require('../Images/hifiPrototypes/tablet/consolidatedTabletHifi.jpg')}
+                             alt="Tablet Hi fi prototypes"/>
+                    </div>
+                    {/*<Lightbox isOpen={THifiLB} setOpen={setTHifiLB} srcImage={require('../Images/hifiPrototypes/tablet/consolidatedTabletHifi.jpg')}/>*/}
                 </div>
-            </Grow>
+            <Typography
+                variant="h4"
+                component="div"
+                sx={{pt:2}}
+            >
+                <b>Doing it in code!</b>
+            </Typography>
+            <Typography
+                variant="body1"
+                component="div"
+                sx={{p:2}}
+            >
+                Once I finished mocking up everything, I went ahead and began designing the static site.
+                Find the link to the website <a href="https://crazykoala555.github.io/Responsive-Redesign/" rel="noreferrer" target="_blank">here</a>.
+
+            </Typography>
         </Container>
     )
 }

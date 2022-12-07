@@ -13,6 +13,12 @@ a {
 #colorStyleGuide{
     width: 85%;
 }
-.slideImageH{
+.slideImageW{
+    width: 100%;
+}
+#phoneSlides{
+    width: 20vw;
+}
+#phoneHifi, #tabletHifi{
     width: 100%;
 }
