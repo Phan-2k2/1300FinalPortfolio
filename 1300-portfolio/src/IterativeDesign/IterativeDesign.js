@@ -1,10 +1,13 @@
 import "./IterativeDesign.css"
 import ProjectsNavbar from "../ProjectsNavbar/ProjectsNavbar";
+import TitleArea from "./TitlePageIterative/TitleArea";
+import ContentArea from "./ContentArea/ContentArea";
 function IterativeDesign () {
     return (
         <div>
             <ProjectsNavbar/>
-            <p>Iterative Design</p>
+            <TitleArea/>
+            <ContentArea/>
         </div>
     )
 }
