@@ -1,0 +1,9 @@
+#titleAreaDev{
+    background-image: url("development-blurred.jpg");
+    height: 80vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+
+}
