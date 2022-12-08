@@ -83,7 +83,9 @@ function ContentArea () {
                         sx={{p:2}}
                     >
                         Last updated in 2012, this website serves as a place for those interested to find more information about Brown University Taekwondo.
-                        Find the link to the website <a href="https://students.brown.edu/Tae_Kwon_Do/" rel="noreferrer" target="_blank">here</a>.
+                        <div style={{textAlign: "center"}}>
+                            <Button onClick={() => {window.open("https://students.brown.edu/Tae_Kwon_Do/")}} size="large" sx={{ color: '#fff', background: "#000", '&:hover' :  {background: "#fff", color: "#000"}}}>Visit the Page</Button>
+                        </div>
                     </Typography>
                 <div style={{textAlign: "center"}} onClick={() => setSketchLB(true)}>
                     <img id="oldSiteImage" src={require('../Images/btkd-capture.jpeg')}
@@ -357,8 +359,11 @@ function ContentArea () {
                         based on the width of the window, I was able to create a more responsive and modernized site. It addresses the issues related to announcements,
                         useful links, as well as non-image headers. It uses the calendar plugin effectively, and makes it much easier for mobile users to
                         access the site more efficiently.
-                        Find the link to the website <a href="https://crazykoala555.github.io/Responsive-Redesign/" rel="noreferrer" target="_blank">here</a>!
                     </Typography>
+                    <div style={{textAlign: "center"}}>
+                        <Button onClick={() => {window.open("https://crazykoala555.github.io/Responsive-Redesign/")}} size="large" sx={{ color: '#fff', background: "#000", '&:hover' :  {background: "#fff", color: "#000"}}}>Visit the Page</Button>
+                        <Button onClick={() => {window.open("https://github.com/crazykoala555/Responsive-Redesign/")}} size="large" sx={{ color: '#fff', background: "#000", '&:hover' :  {background: "#fff", color: "#000"}}}>Visit the Github Repository</Button>
+                    </div>
                     <div style={{textAlign: "center"}} onClick={() => {setRedesign(true)}}>
                         <img id="finalUpdate" src={require('../Images/updated-site.jpeg')}
                              alt="Final redesigned site."/>

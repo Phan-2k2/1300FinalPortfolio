@@ -16,6 +16,8 @@ function ContentArea () {
     const featuresVisible = useIsVisible(featuresRef);
     const worksRef = useRef();
     const worksVisible = useIsVisible(worksRef);
+    const organizationRef = useRef();
+    const organizationVisible = useIsVisible(organizationRef);
     const conclusionRef = useRef();
     const conclusionVisible = useIsVisible(conclusionRef);
 
@@ -66,6 +68,7 @@ function ContentArea () {
                         </Typography>
                     <div style={{textAlign: "center"}}>
                         <Button onClick={() => {window.open("https://crazykoala555.github.io/development/")}} size="large" sx={{ color: '#fff', background: "#000", '&:hover' :  {background: "#fff", color: "#000"}}}>Visit the Page</Button>
+                        <Button onClick={() => {window.open("https://github.com/crazykoala555/development")}} size="large" sx={{ color: '#fff', background: "#000", '&:hover' :  {background: "#fff", color: "#000"}}}>Visit Github Repository</Button>
                     </div>
                     <div style={{textAlign: "center"}} onClick={() => setMainPageLB(true)}>
                         <img id="mainPageImg" src={require('../Images/mainpage.png')}
@@ -103,6 +106,38 @@ function ContentArea () {
                     </Typography>
                 </div>
             </Grow>
+
+            <Grow in={organizationVisible} timeout={500}>
+                <div ref={organizationRef}>
+                    <Typography
+                        variant="h4"
+                        component="div"
+                        sx={{p:2}}
+                    >
+                        <b>Organization:</b>
+                    </Typography>
+                    <Typography
+                        variant="body1"
+                        component="div"
+                        sx={{p:2}}
+                    >
+                        My project is organized in the following way:
+                        <ul>
+                            <li>App.js</li>
+                            <ul><li>Is the main container, organizes all of the 3 sections, holds their respective states.</li></ul>
+                            <li>FilterArea.js</li>
+                            <ul><li>Contains all of the buttons and dropdowns related to filtering and sorting of shop.
+                                These buttons change states, and when detected by the cart, trigger a filtering and sorting operation housed in ItemArea.js.</li></ul>
+                            <li>CartArea.js</li>
+                            <ul><li>Contains all of the items added to the cart. Uses Cart Items, another component with the purpose of containing the item in the
+                                cart and its quantity.</li></ul>
+                            <li>ItemArea.js</li>
+                            <ul><li>Contains all of the store items. Uses Store Items, which use Platform Items. Store Items are cards that display information, including
+                                Platform Items, which display the platforms supported by a given game.</li></ul>
+                        </ul>
+                    </Typography>
+                </div>
+            </Grow>
             <Grow in={worksVisible} timeout={500}>
                 <div ref={worksRef}>
                     <Typography
@@ -126,7 +161,6 @@ function ContentArea () {
                     </Typography>
                 </div>
             </Grow>
-
 
             <Grow in={conclusionVisible} timeout={500}>
                 <div ref={conclusionRef}>
