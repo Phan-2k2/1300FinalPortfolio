@@ -2,11 +2,17 @@ import "./IterativeDesign.css"
 import ProjectsNavbar from "../ProjectsNavbar/ProjectsNavbar";
 import TitleArea from "./TitlePageIterative/TitleArea";
 import ContentArea from "./ContentArea/ContentArea";
+import {useRef} from "react";
+import {useIsVisible} from "../MainPage/MainPage";
 function IterativeDesign () {
+    const titleRef = useRef();
+    const isVisibleTitle = useIsVisible(titleRef);
     return (
+
         <div>
-            <ProjectsNavbar/>
-            <TitleArea/>
+            <ProjectsNavbar titleRef={titleRef} isVisibleTitle={isVisibleTitle}/>
+            <ProjectsNavbar isVisibleTitle={isVisibleTitle}/>
+            <TitleArea titleRef={titleRef} isVisibleTitle={isVisibleTitle}/>
             <ContentArea/>
         </div>
     )

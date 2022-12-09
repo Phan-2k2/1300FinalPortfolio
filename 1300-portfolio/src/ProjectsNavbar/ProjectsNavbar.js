@@ -5,9 +5,23 @@ import { Icon } from '@iconify/react';
 import '../Navbar.css'
 import {animateScroll as scroll} from 'react-scroll'
 import {NavLink} from "react-router-dom";
+import {Transition} from "react-transition-group";
 
 
 function ProjectsNavbar (props) {
+
+    const defaultStyle = {
+        transition: `background-color 300ms ease-in-out`,
+        backgroundColor: "rgba(0,0,0,0)",
+        boxShadow: "none"
+    };
+
+    const transitionStyles = {
+        entering: {backgroundColor: "rgba(0,0,0,0)"},
+        entered: {backgroundColor: "rgba(0,0,0,1)"},
+        exiting: {backgroundColor: "rgba(0,0,0,1)"},
+        exited: {backgroundColor: "rgba(0,0,0,0)"},
+    };
 
     const [openDrawer, setOpenDrawer] = useState(false);
     function drawerToggle () {
@@ -19,10 +33,14 @@ function ProjectsNavbar (props) {
     }
 
     return(
-        <Box sx={{ display: 'flex' }}>
-            <AppBar ref={props.navbarRef} component="nav" sx={{
-                backgroundColor: "rgba(0,0,0,0.7)"
-            }}>
+
+        <Transition in={!props.isVisibleTitle} timeout={0}>
+            {(state) => (
+                <Box sx={{ display: 'flex' }}>
+                    <AppBar ref={props.navbarRef} component="nav" sx={{
+                        ...defaultStyle,
+                        ...transitionStyles[state]
+                    }}>
                 <Toolbar>
                     <IconButton
                         aria-label="open drawer"
@@ -38,18 +56,18 @@ function ProjectsNavbar (props) {
                             sx={{ flexGrow: 1, display: { xs: 'flex', sm: 'flex' }, alignItems: "center", color: "white" }}
                         >
                             {
-                                <IconButton sx={{padding:0}} onClick={scroll.scrollToTop}>
-                                    <Icon icon="icon-park-outline:koala-bear" color="white" height={40}/>
-                                </IconButton>
+                                <NavLink to={"/1300FinalPortfolio"} style={{textDecoration: 'none'}}>
+                                    <IconButton sx={{padding:0}}>
+                                        <Icon icon="icon-park-outline:koala-bear" color="white" height={40}/>
+                                    </IconButton>
+                                </NavLink>
                             }
                             CrazyKoala555
                         </Typography>
                     <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-                        <NavLink to={"/1300FinalPortfolio"} style={{textDecoration: 'none'}}>
-                            <Button key="home" sx={{ color: '#fff' }}>
-                                Return to Home
+                            <Button key="home" sx={{ color: '#fff' }} onClick={scroll.scrollToTop}>
+                                Scroll To Top
                             </Button>
-                        </NavLink>
                     </Box>
                 </Toolbar>
             </AppBar>
@@ -71,12 +89,10 @@ function ProjectsNavbar (props) {
                     {
                         <div className="menuDrawer">
                             <div id={"drawerButtons"}>
-                                <NavLink to={"/1300FinalPortfolio"} style={{textDecoration: 'none'}}>
-                                    <Button key="home"
+                                    <Button key="home" onClick={scroll.scrollToTop}
                                             sx={{ color: '#fff', background: "#000", '&:hover' :  {background: "#fff", color: "#000"}}}>
-                                        Return to Home
+                                        Scroll To Top
                                     </Button>
-                                </NavLink>
                             </div>
                             <div id="drawerCopyright">
                                 <Typography variant="body2" sx={{pb:2
@@ -89,6 +105,8 @@ function ProjectsNavbar (props) {
                 </Drawer>
             </Box>
         </Box>
+            )}
+        </Transition>
     )
 }
 export default ProjectsNavbar;

@@ -2,11 +2,16 @@ import './ResponsiveRedesign.css'
 import ProjectsNavbar from "../ProjectsNavbar/ProjectsNavbar";
 import TitleArea from "./TitlePageRedesign/TitleArea";
 import ContentArea from "./ContentArea/ContentArea";
+import {useRef} from "react";
+import {useIsVisible} from "../MainPage/MainPage";
 function ResponsiveRedesign () {
+    const titleRef = useRef();
+    const isVisibleTitle = useIsVisible(titleRef);
     return (
+
         <div>
-            <ProjectsNavbar/>
-            <TitleArea/>
+            <ProjectsNavbar isVisibleTitle={isVisibleTitle}/>
+            <TitleArea titleRef={titleRef} isVisibleTitle={isVisibleTitle}/>
             <ContentArea/>
         </div>
     )

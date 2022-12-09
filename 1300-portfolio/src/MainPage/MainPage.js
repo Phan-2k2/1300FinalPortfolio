@@ -34,7 +34,7 @@ function MainPage() {
 
   return (
     <div className="App">
-        <NavBar aboutRef={aboutRef} projectsRef={projectsRef} contactsRef={contactsRef} navbarRef={navbarRef}/>
+        <NavBar aboutRef={aboutRef} projectsRef={projectsRef} contactsRef={contactsRef} navbarRef={navbarRef} titleVisible={isVisibleTitle}/>
         <TitleArea titleRef={titleRef} isVisible={isVisibleTitle}/>
         <AboutArea aboutRef={aboutRef} isVisible={isVisibleAbout}/>
         <hr/>

@@ -5,12 +5,9 @@ import {useIsVisible} from "../../MainPage/MainPage";
 
 function TitleArea (props) {
 
-    let titleRef = useRef();
-    let isVisible = useIsVisible(titleRef);
-
     return(
-        <div id="titleAreaRedesign" ref={titleRef}>
-            <Grow in={isVisible} timeout={1000}>
+        <div id="titleAreaRedesign" ref={props.titleRef}>
+            <Grow in={props.isVisible} timeout={1000}>
                 <Container sx={{
                     display: "flex",
                     alignItems: "center",
