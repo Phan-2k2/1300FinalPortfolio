@@ -7,7 +7,7 @@ function TitleArea (props) {
 
     return(
         <div id="titleAreaRedesign" ref={props.titleRef}>
-            <Grow in={props.isVisible} timeout={1000}>
+            <Grow in={props.isVisibleTitle} timeout={1000}>
                 <Container sx={{
                     display: "flex",
                     alignItems: "center",

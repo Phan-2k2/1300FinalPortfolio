@@ -1,9 +1,10 @@
 #titleAreaMain{
-    background-image: url("main-background-blurred2.jpg");
     height: 80vh;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    /*background-position: center;*/
+    /*background-repeat: no-repeat;*/
+    /*background-size: cover;*/
+    /*background-image: url("main-background-blurred2.jpg");*/
     display: flex;
-
+    background: rgb(17,88,69);
+    background: linear-gradient(180deg, rgba(17,88,69,1) 0%, rgba(18,80,110,1) 50%, rgba(1,21,2,0) 100%);
 }

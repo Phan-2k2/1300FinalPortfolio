@@ -14,6 +14,7 @@ function ProjectItem (props) {
 
     return(
         <div className="projectCard">
+            <NavLink to={props.link} style={{textDecoration: 'none'}}>
             <Card sx={{ minWidth: {xs : 0.8*width, sm : 350}, height: "100%", background: "rgba(45, 42, 46, 1)"}}>
                 <CardMedia
                     component="img"
@@ -32,11 +33,10 @@ function ProjectItem (props) {
                     </Typography>
                 </CardContent>
                 <CardActions>
-                    <NavLink to={props.link} style={{textDecoration: 'none'}}>
                         <Button size="medium" sx={{ color: '#fff', background: "#000", '&:hover' :  {background: "#fff", color: "#000"}}}>Read More</Button>
-                    </NavLink>
                 </CardActions>
             </Card>
+            </NavLink>
         </div>
     )
 }

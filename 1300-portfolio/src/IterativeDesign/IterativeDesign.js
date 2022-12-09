@@ -10,7 +10,6 @@ function IterativeDesign () {
     return (
 
         <div>
-            <ProjectsNavbar titleRef={titleRef} isVisibleTitle={isVisibleTitle}/>
             <ProjectsNavbar isVisibleTitle={isVisibleTitle}/>
             <TitleArea titleRef={titleRef} isVisibleTitle={isVisibleTitle}/>
             <ContentArea/>
