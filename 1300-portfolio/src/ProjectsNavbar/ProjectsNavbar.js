@@ -65,7 +65,7 @@ function ProjectsNavbar (props) {
                             CrazyKoala555
                         </Typography>
                     <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-                            <Button key="home" sx={{ color: '#fff' }} onClick={scroll.scrollToTop}>
+                            <Button key="home" sx={{ color: '#fff'}} onClick={scroll.scrollToTop}>
                                 Scroll To Top
                             </Button>
                     </Box>
@@ -90,7 +90,7 @@ function ProjectsNavbar (props) {
                         <div className="menuDrawer">
                             <div id={"drawerButtons"}>
                                     <Button key="home" onClick={scroll.scrollToTop}
-                                            sx={{ color: '#fff', background: "#000", '&:hover' :  {background: "#fff", color: "#000"}}}>
+                                            sx={{ color: '#fff', background: "rgba(0,0,0,0)", '&:hover' :  {background: "#000", color: "#fff"}}}>
                                         Scroll To Top
                                     </Button>
                             </div>

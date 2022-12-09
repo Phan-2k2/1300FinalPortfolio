@@ -121,15 +121,15 @@ function NavBar (props) {
                                 <div className="menuDrawer">
                                     <div id={"drawerButtons"}>
                                         <Button key="about"  onClick={() => drawerClickHandler("about")}
-                                                sx={{ color: '#fff', background: "#000", '&:hover' :  {background: "#fff", color: "#000"}}}>
+                                                sx={{ color: '#fff', background: "rgba(0,0,0,0)", '&:hover' :  {background: "#000", color: "#fff"}}}>
                                             About
                                         </Button>
                                         <Button key="projects" onClick={() => drawerClickHandler("projects")}
-                                                sx={{ color: '#fff', background: "#000", '&:hover' :  {background: "#fff", color: "#000"}}}>
+                                                sx={{ color: '#fff', background: "rgba(0,0,0,0)", '&:hover' :  {background: "#000", color: "#fff"}}}>
                                             Projects
                                         </Button>
                                         <Button key="contact" onClick={() => drawerClickHandler("contact")}
-                                                sx={{ color: '#fff', background: "#000", '&:hover' :  {background: "#fff", color: "#000"}}}>
+                                                sx={{ color: '#fff', background: "rgba(0,0,0,0)", '&:hover' :  {background: "#000", color: "#fff"}}}>
                                             Contact
                                         </Button>
                                     </div>
