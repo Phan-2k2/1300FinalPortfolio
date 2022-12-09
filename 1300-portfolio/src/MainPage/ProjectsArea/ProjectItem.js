@@ -33,7 +33,7 @@ function ProjectItem (props) {
                     </Typography>
                 </CardContent>
                 <CardActions>
-                        <Button size="medium" sx={{ color: '#fff', background: "#000", '&:hover' :  {background: "#fff", color: "#000"}}}>Read More</Button>
+                        <Button size="medium" sx={{ color: '#fff', background: "#1565c0", '&:hover' :  {background: "#fff", color: "#000"}}}>Read More</Button>
                 </CardActions>
             </Card>
             </NavLink>

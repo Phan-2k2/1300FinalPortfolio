@@ -444,9 +444,9 @@ function ContentArea () {
                         of user feedback, how to most effectively get it, and how we can improve.
                     </Typography>
                     <div className="projectNavButtons">
-                        <Button onClick={() => {scroll.scrollToTop()}} size="large" sx={{ color: '#fff', background: "#000", '&:hover' :  {background: "#fff", color: "#000"}}}>Scroll To Top</Button>
+                        <Button onClick={() => {scroll.scrollToTop()}} size="large" sx={{ color: '#fff', background: "#156cc0", '&:hover' :  {background: "#fff", color: "#000"}, m:1}}>Scroll To Top</Button>
                         <NavLink to={"/1300FinalPortfolio"} style={{textDecoration: 'none'}}>
-                            <Button size="large" sx={{ color: '#fff', background: "#000", '&:hover' :  {background: "#fff", color: "#000"}}}>Return Home</Button>
+                            <Button size="large" sx={{ color: '#fff', background: "#156cc0", '&:hover' :  {background: "#fff", color: "#000"}, m:1}}>Return Home</Button>
                         </NavLink>
                     </div>
                 </div>

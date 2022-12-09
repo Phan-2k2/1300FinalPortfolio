@@ -243,14 +243,14 @@ function ContentArea () {
                                 component="div"
                                 sx={{p:2}}
                             >
-                                    &emsp; User 1 is a person who is not super interested in the process of cooking, and kind of just wants the
+                                    User 1 is a person who is not super interested in the process of cooking, and kind of just wants the
                                     food to be done as quickly as possible. <br/>
-                                    &emsp; By trying to speed through everything so that they are able to go onto the next task, user 1 pays a bit
+                                    By trying to speed through everything so that they are able to go onto the next task, user 1 pays a bit
                                     less attention to instructions, and prioritizes speed over everything else. They regularly overshoot numbers
                                     when trying to dial in settings, and have to go back to fix it. They are fairly impatient and don't want to
                                     spend time looking up how to use the appliance, sometimes making mistakes and pressing the wrong buttons, getting
                                     frustrated with the appliance. <br/>
-                                    &emsp; This persona is very similar to those who don't really enjoy cooking, and simply do it because they need sustenance.
+                                    This persona is very similar to those who don't really enjoy cooking, and simply do it because they need sustenance.
                                     They, therefore want to cook for the shortest time possible, taking shortcuts, making mistakes, and being impatient.
                                     In observations, you can see how this user appears, noting how some stuff is too complex, and would rather use the
                                     simpler toaster oven instead. There are also notes of how users typically thing the interface is too slow when inputting information.
@@ -270,13 +270,13 @@ function ContentArea () {
                                 component="div"
                                 sx={{p:2}}
                             >
-                                    &emsp; User 2 is a person who enjoys the process of cooking, and notably, takes their time when operating
+                                    User 2 is a person who enjoys the process of cooking, and notably, takes their time when operating
                                     the appliance interface. <br/>
-                                    &emsp; By taking their time with everything and enjoying the process of cooking, user 2 pays more attention
+                                    By taking their time with everything and enjoying the process of cooking, user 2 pays more attention
                                     to the appliance controls, and refers to their phone if they get confused. Ah, the wonders of the internet!
                                     While the controls seem a bit confusing when operating the oven, and they don't really understand how the other
                                     timer functions work, they stick with what they know and remain calm. <br/>
-                                    &emsp; This persona is very similar to those who do enjoy cooking, as those who enjoy are more likely to take their time
+                                    This persona is very similar to those who do enjoy cooking, as those who enjoy are more likely to take their time
                                     and enjoy the process, remaining calm and extremely patient while their food cooks. By remaining calm, they're able
                                     to take their time working with the inputs of the system, and even if confusing, turning to the internet to correctly
                                     using the appliance.
@@ -463,9 +463,9 @@ function ContentArea () {
                         can do to make the frustrations and grievances disappear.
                     </Typography>
                     <div className="projectNavButtons">
-                        <Button onClick={() => {scroll.scrollToTop()}} size="large" sx={{ color: '#fff', background: "#000", '&:hover' :  {background: "#fff", color: "#000"}}}>Scroll To Top</Button>
+                        <Button onClick={() => {scroll.scrollToTop()}} size="large" sx={{ color: '#fff', background: "#156cc0", '&:hover' :  {background: "#fff", color: "#000"}, m:1}}>Scroll To Top</Button>
                         <NavLink to={"/1300FinalPortfolio"} style={{textDecoration: 'none'}}>
-                            <Button size="large" sx={{ color: '#fff', background: "#000", '&:hover' :  {background: "#fff", color: "#000"}}}>Return Home</Button>
+                            <Button size="large" sx={{ color: '#fff', background: "#156cc0", '&:hover' :  {background: "#fff", color: "#000"}, m:1}}>Return Home</Button>
                         </NavLink>
                     </div>
                 </div>

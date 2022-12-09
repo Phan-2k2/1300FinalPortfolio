@@ -67,8 +67,8 @@ function ContentArea () {
                             The user is able to add items to their cart, and estimate the cost of purchasing games at a given price.
                         </Typography>
                     <div style={{textAlign: "center"}}>
-                        <Button onClick={() => {window.open("https://crazykoala555.github.io/development/")}} size="large" sx={{ color: '#fff', background: "#000", '&:hover' :  {background: "#fff", color: "#000"}}}>Visit the Page</Button>
-                        <Button onClick={() => {window.open("https://github.com/crazykoala555/development")}} size="large" sx={{ color: '#fff', background: "#000", '&:hover' :  {background: "#fff", color: "#000"}}}>Visit Github Repository</Button>
+                        <Button onClick={() => {window.open("https://crazykoala555.github.io/development/")}} size="large" sx={{ color: '#fff', background: "#156cc0", '&:hover' :  {background: "#fff", color: "#000"}, m:1 }}>Visit the Page</Button>
+                        <Button onClick={() => {window.open("https://github.com/crazykoala555/development")}} size="large" sx={{ color: '#fff', background: "#156cc0", '&:hover' :  {background: "#fff", color: "#000"}, m:1}}>Visit Github Repository</Button>
                     </div>
                     <div style={{textAlign: "center"}} onClick={() => setMainPageLB(true)}>
                         <img id="mainPageImg" src={require('../Images/mainpage.png')}
@@ -183,9 +183,9 @@ function ContentArea () {
                         a better understanding of the concepts of a whole.
                     </Typography>
                     <div className="projectNavButtons">
-                        <Button onClick={() => {scroll.scrollToTop()}} size="large" sx={{ color: '#fff', background: "#000", '&:hover' :  {background: "#fff", color: "#000"}}}>Scroll To Top</Button>
+                        <Button onClick={() => {scroll.scrollToTop()}} size="large" sx={{ color: '#fff', background: "#156cc0", '&:hover' :  {background: "#fff", color: "#000"}, m:1}}>Scroll To Top</Button>
                         <NavLink to={"/1300FinalPortfolio"} style={{textDecoration: 'none'}}>
-                            <Button size="large" sx={{ color: '#fff', background: "#000", '&:hover' :  {background: "#fff", color: "#000"}}}>Return Home</Button>
+                            <Button size="large" sx={{ color: '#fff', background: "#156cc0", '&:hover' :  {background: "#fff", color: "#000"}, m:1}}>Return Home</Button>
                         </NavLink>
                     </div>
                 </div>

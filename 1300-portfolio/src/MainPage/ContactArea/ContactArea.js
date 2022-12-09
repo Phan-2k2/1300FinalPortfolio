@@ -37,29 +37,29 @@ function ContactArea (props) {
                             </Typography>
                             <input type="text" placeholder="Email Address" id="formEmail"/>
                             <textarea placeholder="Message" id="formMessage"/>
-                            <Button variant="contained" onClick={snackBarOpen} sx={{background: "rgb(45, 42, 46, 0)"}}>
+                            <Button variant="contained" onClick={snackBarOpen} sx={{background: "rgb(45, 42, 46, 0)", boxShadow: "none"}}>
                                 <Icon  icon="material-symbols:send" fontSize={iconSize}/>
                             </Button>
                         </form>
 
                     </div>
                     <div id="mediaButtons">
-                        <Button variant="contained" onClick={snackBarOpen} sx={{background: "rgb(45, 42, 46, 0)"}}>
+                        <Button variant="contained" onClick={snackBarOpen} sx={{background: "rgb(45, 42, 46, 0)", boxShadow: "none"}}>
                             <Icon icon="mdi:instagram" fontSize={iconSize}/>
                         </Button>
-                        <Button variant="contained" onClick={snackBarOpen} sx={{background: "rgb(45, 42, 46, 0)"}}>
+                        <Button variant="contained" onClick={snackBarOpen} sx={{background: "rgb(45, 42, 46, 0)", boxShadow: "none"}}>
                             <Icon icon="mdi:linkedin" fontSize={iconSize}/>
                         </Button>
-                        <Button variant="contained" onClick={snackBarOpen} sx={{background: "rgb(45, 42, 46, 0)"}}>
+                        <Button variant="contained" onClick={snackBarOpen} sx={{background: "rgb(45, 42, 46, 0)", boxShadow: "none"}}>
                             <Icon icon="mdi:twitter" fontSize={iconSize}/>
                         </Button>
-                        <Button variant="contained" onClick={snackBarOpen} sx={{background: "rgb(45, 42, 46, 0)"}}>
+                        <Button variant="contained" onClick={snackBarOpen} sx={{background: "rgb(45, 42, 46, 0)", boxShadow: "none"}}>
                             <Icon icon="ic:baseline-facebook" fontSize={iconSize}/>
                         </Button>
-                        <Button variant="contained" onClick={snackBarOpen} sx={{background: "rgb(45, 42, 46, 0)"}}>
+                        <Button variant="contained" onClick={snackBarOpen} sx={{background: "rgb(45, 42, 46, 0)", boxShadow: "none"}}>
                             <Icon icon="ic:baseline-discord" fontSize={iconSize}/>
                         </Button>
-                        <Button variant="contained" onClick={snackBarOpen} sx={{background: "rgb(45, 42, 46, 0)"}}>
+                        <Button variant="contained" onClick={snackBarOpen} sx={{background: "rgb(45, 42, 46, 0)", boxShadow: "none"}}>
                             <Icon  icon="mdi:github" fontSize={iconSize}/>
                         </Button>
                     </div>
