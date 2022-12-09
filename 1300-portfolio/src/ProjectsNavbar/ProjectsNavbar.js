@@ -12,15 +12,15 @@ function ProjectsNavbar (props) {
 
     const defaultStyle = {
         transition: `background-color 300ms ease-in-out`,
-        backgroundColor: "rgba(0,0,0,0)",
+        backgroundColor: "rgba(35,35,38,0)",
         boxShadow: "none"
     };
 
     const transitionStyles = {
-        entering: {backgroundColor: "rgba(0,0,0,0)"},
-        entered: {backgroundColor: "rgba(0,0,0,1)"},
-        exiting: {backgroundColor: "rgba(0,0,0,1)"},
-        exited: {backgroundColor: "rgba(0,0,0,0)"},
+        entering: {backgroundColor: "rgba(35,35,38,0)"},
+        entered: {backgroundColor: "rgba(35,35,38,1)"},
+        exiting: {backgroundColor: "rgba(35,35,38,1)"},
+        exited: {backgroundColor: "rgba(35,35,38,0)"},
     };
 
     const [openDrawer, setOpenDrawer] = useState(false);
@@ -82,9 +82,9 @@ function ProjectsNavbar (props) {
                     sx={{
                         display: { xs: 'block', sm: 'none' },
                         '& .MuiDrawer-paper': { boxSizing: 'border-box', width: 240 },
-                        background: "rgba(0,0,0,0.7)",
+                        background: "rgba(35,35,38,0.7)",
                     }}
-                    PaperProps={{sx: {background: "rgba(0,0,0,1)"}}}
+                    PaperProps={{sx: {background: "rgba(35,35,38,1)"}}}
                 >
                     {
                         <div className="menuDrawer">
