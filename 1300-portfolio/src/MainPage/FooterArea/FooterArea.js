@@ -11,7 +11,7 @@ function FooterArea () {
     return (
         <div id="footer" style={footerStyle}>
             <Typography variant="body2" sx={{color: "white", textAlign: "center"}}>
-                Copyright &copy; 2022 CrazyKoala555 Portfolio, a UI/UX Project
+                Copyright &copy; 2022 Crazy Koala Portfolio, a UI/UX Project
             </Typography>
         </div>
     )

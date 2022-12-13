@@ -1,7 +1,5 @@
 import './TitleArea.css'
 import {Container, Grow, Typography} from "@mui/material";
-import {useRef} from "react";
-import {useIsVisible} from "../../MainPage/MainPage";
 
 function TitleArea (props) {
 

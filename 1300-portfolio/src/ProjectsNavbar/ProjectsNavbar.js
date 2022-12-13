@@ -62,7 +62,7 @@ function ProjectsNavbar (props) {
                                     </IconButton>
                                 </NavLink>
                             }
-                            CrazyKoala555
+                            Crazy Koala
                         </Typography>
                     <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
                             <Button key="home" sx={{ color: '#fff'}} onClick={scroll.scrollToTop}>
@@ -97,7 +97,7 @@ function ProjectsNavbar (props) {
                             <div id="drawerCopyright">
                                 <Typography variant="body2" sx={{pb:2
                                 }}>
-                                    &copy; CrazyKoala555 2022
+                                    &copy; 2022 Crazy Koala
                                 </Typography>
                             </div>
                         </div>

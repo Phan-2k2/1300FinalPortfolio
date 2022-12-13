@@ -14,7 +14,7 @@ function AboutArea (props) {
                     </Typography>
                     <div id="aboutInfo">
                         <Typography variant="subtitle1" sx={{maxWidth:{xs : "100%", sm : "50%"}}} id="aboutWords">
-                            Hey! I'm CrazyKoala555. I'm from the Great State of West Virginia, and currently
+                            Hey! I'm Crazy Koala. I'm from the Great State of West Virginia, and currently
                             go to Brown University. I'm concentrating in Computer Science, where I hope to have
                             an illustrious career as a UI designer. I really do love frontend work. When I'm not
                             designing awesome interfaces, you can find me playing video games or practicing saxophone.

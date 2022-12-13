@@ -19,7 +19,7 @@ function TitleArea (props) {
                         variant="h3"
                         component="div"
                         sx={{p:2}}
-                    > <b>Hey! I'm Crazy Koala 555.</b>
+                    > <b>Hey! I'm Crazy Koala.</b>
                         {
                             <Typography
                                 variant="h6"

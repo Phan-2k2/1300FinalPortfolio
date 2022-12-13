@@ -294,7 +294,7 @@ function ContentArea () {
                                 component="div"
                                 sx={{pt:2}}
                             >
-                                <b>Desktop Prototypes</b>
+                                <b>Desktop Prototypes (slideshow)</b>
                             </Typography>
                             <Slide cssClass="slides" autoplay={false}>
                                 <div className="each-slide">

@@ -87,7 +87,7 @@ function NavBar (props) {
                                         <Icon icon="icon-park-outline:koala-bear" color="white" height={40}/>
                                     </IconButton>
                                 }
-                                CrazyKoala555
+                                Crazy Koala
                             </Typography>
                             <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
                                 <Button key="about"  onClick={() => scrollHandler("about")} sx={{ color: '#fff' }}>
@@ -136,7 +136,7 @@ function NavBar (props) {
                                     <div id="drawerCopyright">
                                         <Typography variant="body2" sx={{pb:2
                                         }}>
-                                            &copy; CrazyKoala555 2022
+                                            &copy; 2022 Crazy Koala
                                         </Typography>
                                     </div>
                                 </div>

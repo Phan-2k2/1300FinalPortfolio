@@ -39,9 +39,9 @@ function ContentArea () {
     const [sketch2, setSketch2] = useState(false);
     const [sketch3, setSketch3] = useState(false);
     const [sketch4, setSketch4] = useState(false);
-    const [lofi, setLofi] = useState(false);
-    const [hifi, setHifi] = useState(false);
-    const [updatedhifi, setUpdatedHifi] = useState(false);
+    // const [lofi, setLofi] = useState(false);
+    // const [hifi, setHifi] = useState(false);
+    // const [updatedhifi, setUpdatedHifi] = useState(false);
 
     return(
         <Container id="content"
@@ -68,8 +68,11 @@ function ContentArea () {
                             African start up who is essentially creating a version of SnackPass for Africa in order
                             to make quality food more accessible throughout the country. There are many unique problems
                             in the African on-demand/food delivery market and Food Court is working to create a seamless
-                            solution. More information can be found <a href={"https://getfoodcourt.com/"} rel={"noreferrer"} target={"_blank"}>here</a>.
+                            solution.
                         </Typography>
+                    <div className="projectNavButtons">
+                        <Button onClick={() => {window.open("https://getfoodcourt.com/")}} size="large" sx={{ color: '#fff', background: "#156cc0", '&:hover' :  {background: "#fff", color: "#000"}, m:1}}>Learn More About Food Court</Button>
+                    </div>
                 </div>
             </Grow>
             <Grow in={p1Visible} timeout={500}>
@@ -161,11 +164,11 @@ function ContentArea () {
                         ideas, all including some kind of search page, a home page and a restaurant page.
                         Our final high fidelity wireframe had 5 total pages; a login page, a home page, a search page, a restaurant page and a checkout page. Below is an image of our final sketches.
                     </Typography>
-                    <div style={{textAlign: "center"}} onClick={() => setLofi(true)}>
+                    {/*<div style={{textAlign: "center"}} onClick={() => setLofi(true)}>*/}
                         <img className="lofiFC" src={require('../Images/low_fidelity/lofiFC.jpg')}
                              alt="Consolidated Wireframe"/>
-                    </div>
-                    <Lightbox isOpen={lofi} setOpen={setLofi} srcImage={require('../Images/low_fidelity/lofiFC.jpg')}/>
+                    {/*</div>*/}
+                    {/*<Lightbox isOpen={lofi} setOpen={setLofi} srcImage={require('../Images/low_fidelity/lofiFC.jpg')}/>*/}
                 </div>
             </Grow>
 
@@ -193,11 +196,11 @@ function ContentArea () {
                     >
                         <b>Interactive High Fidelity Mockup</b>
                     </Typography>
-                    <div style={{textAlign: "center"}} onClick={() => setHifi(true)}>
+                    {/*<div style={{textAlign: "center"}} onClick={() => setHifi(true)}>*/}
                         <img className="hifiFC" src={require('../Images/high_fidelity/hifiFC.jpg')}
                              alt="Hifi Prototype"/>
-                    </div>
-                    <Lightbox isOpen={hifi} setOpen={setHifi} srcImage={require('../Images/high_fidelity/hifiFC.jpg')}/>
+                    {/*</div>*/}
+                    {/*<Lightbox isOpen={hifi} setOpen={setHifi} srcImage={require('../Images/high_fidelity/hifiFC.jpg')}/>*/}
                 </div>
             </Grow>
             <Grow in={hifi2Visible} timeout={500}>
@@ -284,11 +287,11 @@ function ContentArea () {
                             open/closed indicator and adding the number of reviews next to the star rating on the
                             restaurant page. These changes were small, but will make a big difference in terms of usability.
                         </Typography>
-                    <div style={{textAlign: "center"}} onClick={() => setUpdatedHifi(true)}>
+                    {/*<div style={{textAlign: "center"}} onClick={() => setUpdatedHifi(true)}>*/}
                         <img className="updatedhifiFC" src={require('../Images/updated_high_fidelity/updatedHifiFC.jpg')}
                              alt="Updated Hi fi prototype"/>
-                    </div>
-                    <Lightbox isOpen={updatedhifi} setOpen={setUpdatedHifi} srcImage={require('../Images/updated_high_fidelity/updatedHifiFC.jpg')}/>
+                    {/*</div>*/}
+                    {/*<Lightbox isOpen={updatedhifi} setOpen={setUpdatedHifi} srcImage={require('../Images/updated_high_fidelity/updatedHifiFC.jpg')}/>*/}
                 </div>
             </Grow>
             <Grow in={testingVisible} timeout={500}>
@@ -354,6 +357,13 @@ function ContentArea () {
                         <b>Analysis Of Results</b>
                     </Typography>
                     <Typography
+                        variant="h6"
+                        component="div"
+                        sx={{pt:2}}
+                    >
+                        <b>Main Summary</b>
+                    </Typography>
+                    <Typography
                         variant="body1"
                         component="div"
                         sx={{p:2}}
@@ -363,13 +373,6 @@ function ContentArea () {
                         kitchen from the main screen, with relative ease and understanding. One user notes the logical
                         layout of the application. It was surprising that some users found difficulty finding a way to
                         checkout (need to open cart). Users otherwise had little to no issues completing the tasks.
-                    </Typography>
-                    <Typography
-                        variant="h6"
-                        component="div"
-                        sx={{pt:2}}
-                    >
-                        <b>Main Summary</b>
                     </Typography>
                     <Typography
                         variant="h6"
