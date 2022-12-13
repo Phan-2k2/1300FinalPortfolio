@@ -87,7 +87,7 @@ function NavBar (props) {
                                         <Icon icon="icon-park-outline:koala-bear" color="white" height={40}/>
                                     </IconButton>
                                 }
-                                Crazy Koala
+                                Crazy Koala Banana
                             </Typography>
                             <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
                                 <Button key="about"  onClick={() => scrollHandler("about")} sx={{ color: '#fff' }}>
