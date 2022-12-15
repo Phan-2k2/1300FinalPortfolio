@@ -1,9 +1,15 @@
 import {Container, Grow, Typography} from "@mui/material";
 import './AboutArea.css'
-import {Icon} from "@iconify/react";
+// import {Icon} from "@iconify/react";
+// import profilePhoto from "../../Images/ADP06474.jpg"
+import apLogo from "../../Images/apLogo-cropped.svg";
+import React from "react";
 
 function AboutArea (props) {
 
+    const defaultStyleSVG = {
+        height: "20rem",
+    };
 
     return(
         <div id="aboutArea" ref={props.aboutRef}>
@@ -14,10 +20,9 @@ function AboutArea (props) {
                     </Typography>
                     <div id="aboutInfo">
                         <Typography variant="subtitle1" sx={{maxWidth:{xs : "100%", sm : "50%"}}} id="aboutWords">
-                            Hey! I'm Crazy Koala. I'm from the Great State of West Virginia, and currently
-                            go to Brown University. I'm concentrating in Computer Science, where I hope to have
-                            an illustrious career as a UI designer. I really do love frontend work. When I'm not
-                            designing awesome interfaces, you can find me playing video games or practicing saxophone.
+                            Hey! I'm Austin Phan. I'm from the Great State of New Hampshire, and currently
+                            go to Brown University. I'm currently concentrating in Computer Science.
+                            When I'm not programming, you can find me playing video games or practicing Taekwondo.
                             My favorite video games include:
                             <ul>
                                 <li>Assetto Corsa</li>
@@ -30,7 +35,9 @@ function AboutArea (props) {
                             Click on any of the projects to learn more. Thanks for visiting!
                         </Typography>
                         <Container sx={{display:{xs:"none", sm:"block"}, textAlign: "center"}}>
-                            <Icon icon="icon-park-outline:koala-bear" color="white" id="koalaIcon"/>
+                            {/*<Icon icon="icon-park-outline:koala-bear" color="white" id="koalaIcon"/>*/}
+                            <img className="svgLogo" src={apLogo} alt={"hello!"} style={defaultStyleSVG}/>
+                            {/*<img id="profilePhoto" src={profilePhoto} alt={"Austin's Photo"}/>*/}
                         </Container>
                     </div>
                 </div>

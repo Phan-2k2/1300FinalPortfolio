@@ -19,3 +19,8 @@
 }
 #aboutWords{
 }
+#profilePhoto{
+    border-radius: 30px;
+    width: 100%;
+    height: 20rem;
+}

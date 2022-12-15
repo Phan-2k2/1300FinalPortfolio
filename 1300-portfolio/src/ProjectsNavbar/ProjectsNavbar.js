@@ -97,7 +97,7 @@ function ProjectsNavbar (props) {
                             <div id="drawerCopyright">
                                 <Typography variant="body2" sx={{pb:2
                                 }}>
-                                    &copy; 2022 Crazy Koala
+                                    &copy; 2022 Austin Phan
                                 </Typography>
                             </div>
                         </div>

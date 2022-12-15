@@ -1,18 +1,29 @@
 import AppBar from '@mui/material/AppBar';
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import {Box, Button, Drawer, IconButton, Toolbar, Typography} from "@mui/material";
 import { Icon } from '@iconify/react';
 import '../../Navbar.css'
 import { animateScroll as scroll} from 'react-scroll'
 import {Transition} from "react-transition-group";
-
+import apLogo from '../../Images/apLogo-cropped.svg'
 
 function NavBar (props) {
+
+    const [navHeight, setNavheight] = useState("10px")
+
+    useEffect(()=>{
+        setNavheight(props.navbarRef.current.clientHeight/2 + "px")
+    }, [props.navbarRef])
+
 
     const defaultStyle = {
         transition: `background-color 300ms ease-in-out`,
         backgroundColor: "rgba(35,35,38,0)",
         boxShadow: "none"
+    };
+
+    const defaultStyleSVG = {
+        height: navHeight,
     };
 
     const transitionStyles = {
@@ -84,10 +95,10 @@ function NavBar (props) {
                             >
                                 {
                                     <IconButton sx={{padding:0}} onClick={scroll.scrollToTop}>
-                                        <Icon icon="icon-park-outline:koala-bear" color="white" height={40}/>
+                                        <img className="svgLogo" src={apLogo} alt={"hello!"} style={defaultStyleSVG}/>
                                     </IconButton>
                                 }
-                                Crazy Koala
+                                {/*&ensp; Austin Phan*/}
                             </Typography>
                             <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
                                 <Button key="about"  onClick={() => scrollHandler("about")} sx={{ color: '#fff' }}>
@@ -136,7 +147,7 @@ function NavBar (props) {
                                     <div id="drawerCopyright">
                                         <Typography variant="body2" sx={{pb:2
                                         }}>
-                                            &copy; 2022 Crazy Koala
+                                            &copy; 2022 Austin Phan
                                         </Typography>
                                     </div>
                                 </div>
