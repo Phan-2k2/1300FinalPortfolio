@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/1300FinalPortfolio/static/css/main.bcf41d1c.css",
-    "main.js": "/1300FinalPortfolio/static/js/main.303a99e7.js",
+    "main.css": "/1300FinalPortfolio/static/css/main.24ec6f1a.css",
+    "main.js": "/1300FinalPortfolio/static/js/main.e7bc6526.js",
     "static/media/user_testing_3.mp4": "/1300FinalPortfolio/static/media/user_testing_3.9293a7230ca7e5bf3a17.mp4",
     "static/media/user_testing_1.mp4": "/1300FinalPortfolio/static/media/user_testing_1.cc215d725ebd9700f55f.mp4",
     "static/media/user_testing_2.mp4": "/1300FinalPortfolio/static/media/user_testing_2.f16933299bf3e82bc115.mp4",
@@ -38,12 +38,13 @@
     "static/media/3_2.png": "/1300FinalPortfolio/static/media/3_2.bb045bd4bf800632ecbf.png",
     "static/media/lofiFC.jpg": "/1300FinalPortfolio/static/media/lofiFC.4ed49cfaeca87c27eab9.jpg",
     "static/media/iterative2-blurred.jpg": "/1300FinalPortfolio/static/media/iterative2-blurred.168e81665a38099fd430.jpg",
+    "static/media/apLogo-cropped.svg": "/1300FinalPortfolio/static/media/apLogo-cropped.58d963ba694c61ec1ce5c0de9f774a16.svg",
     "index.html": "/1300FinalPortfolio/index.html",
-    "main.bcf41d1c.css.map": "/1300FinalPortfolio/static/css/main.bcf41d1c.css.map",
-    "main.303a99e7.js.map": "/1300FinalPortfolio/static/js/main.303a99e7.js.map"
+    "main.24ec6f1a.css.map": "/1300FinalPortfolio/static/css/main.24ec6f1a.css.map",
+    "main.e7bc6526.js.map": "/1300FinalPortfolio/static/js/main.e7bc6526.js.map"
   },
   "entrypoints": [
-    "static/css/main.bcf41d1c.css",
-    "static/js/main.303a99e7.js"
+    "static/css/main.24ec6f1a.css",
+    "static/js/main.e7bc6526.js"
   ]
 }
